@@ -1,0 +1,12 @@
+{
+  "connectionString": "HostName=thermalmetrix-hub.azure-devices.net;DeviceId=Probe_Simulator;SharedAccessKey=sORuvfPTUv4EwzwYTQi6Fg85UsWzl5lmBpZSwo0P/Rg=",
+  "mode": "simulation",
+  "logFilePath": "C:/DEV/probe/Output/logfile.log",
+  "logRetentionDays": 7,
+  "telemetryFilePath": "C:/DEV/probe/Output/telemetry_data.json",
+  "serialPorts": {
+    "conductivity": "COM1",
+    "temperature": "COM2",
+    "pressure": "COM3"
+  }
+}

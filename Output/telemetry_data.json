@@ -1,0 +1,321 @@
+[
+  {
+    "data": {
+      "id": "a3ee69df-7a9d-4522-ab4e-c43896f4f3d9",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 3.05,
+      "temperature": 15.1,
+      "pressure": 3.72,
+      "timestamp": "2025-02-03T08:03:19.111281"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "6d70304e-37b8-422b-a2fb-3c477176eaf3",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 3.15,
+      "temperature": 18.1,
+      "pressure": 6.36,
+      "timestamp": "2025-02-03T08:03:24.651580"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "408b102b-3d3b-469d-9cba-d56b45c4aff1",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 4.43,
+      "temperature": 25.5,
+      "pressure": 6.2,
+      "timestamp": "2025-02-03T08:03:29.798801"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "06c4ac74-1699-4bd5-8ca1-522f68db7558",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.02,
+      "temperature": 22.2,
+      "pressure": 7.38,
+      "timestamp": "2025-02-03T08:03:34.931361"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "d52a413a-7e7c-4618-9250-550e80135ae4",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 0.56,
+      "temperature": 25.0,
+      "pressure": 3.41,
+      "timestamp": "2025-02-03T08:03:40.074774"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "392a4899-6494-453a-83e8-721952a5f8ee",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.88,
+      "temperature": 25.0,
+      "pressure": 9.87,
+      "timestamp": "2025-02-03T08:03:45.215201"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "b458bb6e-873d-46cb-b302-449374e08f52",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.51,
+      "temperature": 25.5,
+      "pressure": 9.59,
+      "timestamp": "2025-02-03T08:03:50.353917"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "5311056e-9e92-4049-9195-7a7b0e9b5b12",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 1.56,
+      "temperature": 19.6,
+      "pressure": 9.27,
+      "timestamp": "2025-02-03T08:07:28.513270"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "337fb5b9-4386-4729-87f1-ad9f066bb7dc",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 4.59,
+      "temperature": 23.4,
+      "pressure": 1.81,
+      "timestamp": "2025-02-03T08:07:33.967550"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "048649d7-3c9c-47e9-8852-236315c0ffba",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 1.04,
+      "temperature": 16.3,
+      "pressure": 2.3,
+      "timestamp": "2025-02-03T08:07:39.106586"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "cd6edb0d-b666-47f3-b8c0-96497b5e93a9",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 1.86,
+      "temperature": 23.8,
+      "pressure": 6.28,
+      "timestamp": "2025-02-03T08:07:44.234834"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "152083fa-ecdb-4d1b-9fa7-c44f03fcabc1",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 1.19,
+      "temperature": 27.8,
+      "pressure": 5.72,
+      "timestamp": "2025-02-03T08:07:49.359304"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "ef229b8b-6cb8-412b-9c14-7d32dffa7451",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.47,
+      "temperature": 23.8,
+      "pressure": 4.3,
+      "timestamp": "2025-02-03T08:07:54.488981"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "5b6bd6fe-34ad-4b0b-960a-12b32bc66038",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.5,
+      "temperature": 22.3,
+      "pressure": 4.97,
+      "timestamp": "2025-02-03T08:10:21.386768"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "c8c3df00-eedb-494a-9c37-a2b3d8bdbc0d",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.52,
+      "temperature": 22.3,
+      "pressure": 4.81,
+      "timestamp": "2025-02-03T08:10:26.861231"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "1604c9d0-07e9-412e-b45a-c2d0823d9503",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.59,
+      "temperature": 22.7,
+      "pressure": 4.77,
+      "timestamp": "2025-02-03T08:10:32.014734"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "49ec18b8-9651-4916-bf95-b5cff73a37c2",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.58,
+      "temperature": 22.6,
+      "pressure": 4.87,
+      "timestamp": "2025-02-03T08:10:37.176720"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "c67cb390-aa25-41df-82b9-c251e882d376",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.57,
+      "temperature": 23.0,
+      "pressure": 4.91,
+      "timestamp": "2025-02-03T08:10:42.315984"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "cad22d97-216c-408e-a929-74c19595e312",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.5,
+      "temperature": 23.1,
+      "pressure": 5.04,
+      "timestamp": "2025-02-03T08:10:47.460953"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "c785d364-457f-4ce2-9ce9-4611f77886a8",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.54,
+      "temperature": 21.6,
+      "pressure": 4.76,
+      "timestamp": "2025-02-03T08:10:52.590238"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "cd6a1d70-847c-4665-b814-8a243510133c",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.44,
+      "temperature": 22.6,
+      "pressure": 5.12,
+      "timestamp": "2025-02-03T08:10:57.729153"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "231371f6-3205-49f1-849c-0719f0074b35",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.43,
+      "temperature": 21.5,
+      "pressure": 5.23,
+      "timestamp": "2025-02-03T08:11:02.947947"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "6baacce1-d708-4ba2-8445-7ff0e7821781",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.55,
+      "temperature": 23.3,
+      "pressure": 5.09,
+      "timestamp": "2025-02-03T08:11:08.088653"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "1a9798ae-e617-4931-8674-e87dedc87a12",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.48,
+      "temperature": 44.3,
+      "pressure": 17.66,
+      "timestamp": "2025-02-03T19:25:46.063198"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "28bf1788-5f27-43b2-9a2b-de23a0349c58",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.45,
+      "temperature": 43.2,
+      "pressure": 18.72,
+      "timestamp": "2025-02-03T19:25:51.527868"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "d4aac0dc-bc1b-4029-b27e-bbe90d490504",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.38,
+      "temperature": 44.0,
+      "pressure": 18.58,
+      "timestamp": "2025-02-03T19:25:56.669263"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "c97515bb-a93c-4ba3-8870-bc264eb27150",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.52,
+      "temperature": 45.5,
+      "pressure": 18.8,
+      "timestamp": "2025-02-03T19:26:01.808255"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "bbbecd57-57cd-446c-9859-129a17839cf8",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.56,
+      "temperature": 44.1,
+      "pressure": 17.39,
+      "timestamp": "2025-02-03T19:26:06.951977"
+    },
+    "status": "sent"
+  },
+  {
+    "data": {
+      "id": "fcd549f4-94b7-4845-b70a-12b44d7646a8",
+      "gatewayId": "RaspberryPi-Serial-12345",
+      "conductivity": 2.48,
+      "temperature": 44.8,
+      "pressure": 18.34,
+      "timestamp": "2025-02-03T19:26:12.083954"
+    },
+    "status": "sent"
+  }
+]
