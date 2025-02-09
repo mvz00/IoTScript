@@ -210,6 +210,7 @@ def read_telemetry_from_port(port_config):
 
             if value is not None:
                 telemetry_data = {
+                    "readingGUID": str(uuid.uuid4()),  # Add unique GUID for each reading
                     "sensorId": sensor_id,
                     "sensorTypeId": sensor_type_id,
                     "sensorTypeCode": sensor_type_code,
@@ -321,8 +322,7 @@ def send_telemetry_to_iot_hub():
                         
                         if telemetry_data:
                             payload = {
-                                "id": str(uuid.uuid4()),
-                                "gatewayId": GATEWAY_ID,
+                                "payloadGUID": str(uuid.uuid4()),
                                 "modelNumber": MODEL_NUMBER,
                                 "serialNumber": SERIAL_NUMBER,
                                 "organisationId": ORGANISATION_ID,
