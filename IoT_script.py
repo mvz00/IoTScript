@@ -324,6 +324,7 @@ def send_telemetry_to_iot_hub():
                         
                         if telemetry_data:
                             payload = {
+                                "gatewayId": GATEWAY_ID,
                                 "payloadGUID": str(uuid.uuid4()),
                                 "modelNumber": MODEL_NUMBER,
                                 "serialNumber": SERIAL_NUMBER,

@@ -10,7 +10,7 @@
   "telemetryFilePath": "C:/DEV/Probe/data/telemetry.json",
   "archiveFilePath": "C:/DEV/Probe/data/archive/",
   "archiveTelemetry": false,
-  "secondsBetweenSends": 15,
+  "secondsBetweenSends": 600,
   "simulationMode": true,
   "loggingMode": "verbose",
   "serialPorts": [
@@ -26,7 +26,7 @@
       "mininimumActualValue":0,
       "maximumActualValue":100,
       "gatewayPortId": "COM1",
-      "secondsBetweenReads":5
+      "secondsBetweenReads":60
     },
     {
       "active":true,
@@ -40,7 +40,7 @@
       "mininimumActualValue":0,
       "maximumActualValue":100,
       "gatewayPortId": "COM2",
-      "secondsBetweenReads":5
+      "secondsBetweenReads":60
     },
     {
       "active":true,
@@ -54,7 +54,7 @@
       "mininimumActualValue":0,
       "maximumActualValue":100,
       "gatewayPortId": "COM3",
-      "secondsBetweenReads":5
+      "secondsBetweenReads":60
     }
   ]
 }
