@@ -1,0 +1,434 @@
+2025-02-11 10:51:13,285 - __main__ - INFO - Logging initialized in verbose mode - [MainThread] setup_logging:120
+2025-02-11 10:51:13,286 - __main__ - DEBUG - Verbose logging enabled - additional debug information will be included - [MainThread] setup_logging:123
+2025-02-11 10:51:13,296 - __main__ - INFO - Starting telemetry collection... - [MainThread] main:400
+2025-02-11 10:51:13,296 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:165
+2025-02-11 10:51:13,296 - __main__ - INFO - Started thread for CONDUCTIVITY on COM1 - [MainThread] main:413
+2025-02-11 10:51:13,296 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '694e6293-1886-4052-a1a2-9fa47f4f67cb', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'portNumber': 'COM1', 'value': 62.59406836789345, 'isSimulated': True, 'timestamp': '2025-02-10T23:51:13.296642+00:00'} - [Port_COM1] read_telemetry_from_port:222
+2025-02-11 10:51:13,296 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:165
+2025-02-11 10:51:13,296 - __main__ - INFO - Started thread for TEMPERATURE on COM2 - [MainThread] main:413
+2025-02-11 10:51:13,297 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '80c7b893-f47e-424b-820e-2764f59f8545', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'portNumber': 'COM2', 'value': 20.258688913801148, 'isSimulated': True, 'timestamp': '2025-02-10T23:51:13.297209+00:00'} - [Port_COM2] read_telemetry_from_port:222
+2025-02-11 10:51:13,298 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:13,298 - __main__ - INFO - Started thread for PRESSURE on COM3 - [MainThread] main:413
+2025-02-11 10:51:13,298 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:264
+2025-02-11 10:51:13,299 - __main__ - INFO - Started sender thread - [MainThread] main:420
+2025-02-11 10:51:13,309 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:264
+2025-02-11 10:51:14,409 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:14,411 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:19,418 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:20,537 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:20,540 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:25,556 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:26,680 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:26,681 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:31,690 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:32,808 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:32,811 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:37,818 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:38,936 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:38,938 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:43,941 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:45,059 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:45,061 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:50,071 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:51,190 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:51,192 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:51:56,201 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:51:57,314 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:51:57,316 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:02,328 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:03,435 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:03,437 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:08,452 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:09,570 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:09,573 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:13,305 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:165
+2025-02-11 10:52:13,306 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'ce9f55c2-0ec5-4af1-9625-903ed16c5be1', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'portNumber': 'COM1', 'value': 9.345826455441797, 'isSimulated': True, 'timestamp': '2025-02-10T23:52:13.306818+00:00'} - [Port_COM1] read_telemetry_from_port:222
+2025-02-11 10:52:13,308 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:264
+2025-02-11 10:52:13,320 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:165
+2025-02-11 10:52:13,321 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'd2bd30cf-1fc2-4a43-830f-aac8beb03a7b', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'portNumber': 'COM2', 'value': 35.79726608330931, 'isSimulated': True, 'timestamp': '2025-02-10T23:52:13.321396+00:00'} - [Port_COM2] read_telemetry_from_port:222
+2025-02-11 10:52:13,340 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:264
+2025-02-11 10:52:14,579 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:15,687 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:15,690 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:20,692 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:21,811 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:21,814 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:26,826 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:27,948 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:27,951 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:32,955 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:34,070 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:34,073 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:39,090 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:40,209 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:40,210 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:45,215 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:170
+2025-02-11 10:52:46,330 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:198
+2025-02-11 10:52:46,333 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:225
+2025-02-11 10:52:51,104 - __main__ - INFO - Received keyboard interrupt, initiating graceful shutdown... - [MainThread] main:432
+2025-02-11 10:52:51,108 - __main__ - INFO - Shutting down threads... - [MainThread] main:438
+2025-02-11 10:52:51,163 - __main__ - INFO - Azure IoT client shut down - [MainThread] main:457
+2025-02-11 10:57:30,222 - __main__ - INFO - Logging initialized in verbose mode - [MainThread] setup_logging:120
+2025-02-11 10:57:30,222 - __main__ - DEBUG - Verbose logging enabled - additional debug information will be included - [MainThread] setup_logging:123
+2025-02-11 10:57:30,240 - __main__ - INFO - Starting telemetry collection... - [MainThread] main:402
+2025-02-11 10:57:30,240 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:57:30,240 - __main__ - INFO - Started thread for CONDUCTIVITY on COM1 - [MainThread] main:415
+2025-02-11 10:57:30,240 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'd0172bb8-de57-4c80-a700-428af7107a8a', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 88.9527896875822, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:30.240912+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:57:30,241 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:57:30,241 - __main__ - INFO - Started thread for TEMPERATURE on COM2 - [MainThread] main:415
+2025-02-11 10:57:30,241 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '20ab15d8-f2d7-4664-a5fc-5b168897a421', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 42.92641722607517, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:30.241578+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:57:30,242 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:57:30,242 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:57:30,242 - __main__ - INFO - Started thread for PRESSURE on COM3 - [MainThread] main:415
+2025-02-11 10:57:30,243 - __main__ - INFO - Started sender thread - [MainThread] main:422
+2025-02-11 10:57:30,252 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:57:31,352 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:57:31,354 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:57:35,252 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:57:35,252 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:57:35,253 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '4ef1c060-71be-4452-9624-71d72726f025', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 54.11952373426511, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:35.253608+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:57:35,253 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '737ea4d8-ebbc-42a6-aa52-fa46e2fd6dd9', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 66.44428126315172, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:35.253907+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:57:35,257 - __main__ - INFO - Telemetry data written to buffer. Total records: 7 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:57:35,276 - __main__ - INFO - Telemetry data written to buffer. Total records: 8 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:57:36,369 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:57:37,487 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:57:37,491 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:57:40,270 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:57:40,272 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '6c9e4833-833f-4b8d-bac4-61e7e3288584', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 75.36831795909077, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:40.272545+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:57:40,276 - __main__ - INFO - Telemetry data written to buffer. Total records: 9 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:57:40,286 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:57:40,288 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '1c937cc4-5653-4d82-a358-481220ce53d3', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 58.12137104095646, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:40.288639+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:57:40,309 - __main__ - INFO - Telemetry data written to buffer. Total records: 10 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:57:42,497 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:57:43,614 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:57:43,615 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:57:45,287 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:57:45,288 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '7469bc5e-312d-4b52-a5aa-c20f6ca94aa0', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 56.31141281654591, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:45.288742+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:57:45,292 - __main__ - INFO - Telemetry data written to buffer. Total records: 11 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:57:45,315 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:57:45,319 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:57:45,319 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'eb8589ff-f87b-476d-a5c5-d8261e914063', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 96.17033485273508, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:45.319744+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:57:45,322 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:57:45,332 - __main__ - INFO - Read 11 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:57:45,333 - __main__ - INFO - Reconnecting to IoT Hub... - [Sender] send_telemetry_to_iot_hub:347
+2025-02-11 10:57:45,531 - __main__ - INFO - Attempt 1/3 to send telemetry message with 11 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:57:45,781 - __main__ - INFO - Telemetry message successfully sent with 11 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:57:45,782 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:57:48,616 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:57:49,736 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:57:49,738 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:57:50,303 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:57:50,306 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '5d7d18a4-dab3-49f8-bd19-313333c8f4d4', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 12.218261141507657, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:50.306062+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:57:50,310 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:57:50,333 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:57:50,334 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '5d3a661c-45b5-4965-a579-d2507147ae16', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 77.10014283798937, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:50.334584+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:57:50,347 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:57:54,747 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:57:55,320 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:57:55,323 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'fc4a7127-4988-4943-9e57-45c8ba7fbc8a', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 65.44913691881197, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:55.322953+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:57:55,328 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:57:55,352 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:57:55,353 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '59762dcd-c810-47ff-a199-06707f87e506', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 27.458269443992478, 'isSimulated': True, 'timestamp': '2025-02-10T23:57:55.353295+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:57:55,369 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:57:55,862 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:57:55,864 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:00,338 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:00,339 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'd2312916-bcdd-44e4-8c26-0ac00b5523e3', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 78.04137208537063, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:00.339062+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:00,342 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:00,384 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:00,385 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '334e607a-2b58-4a8d-8726-559c78e9d5b1', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 43.1968774718831, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:00.385480+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:00,407 - __main__ - INFO - Telemetry data written to buffer. Total records: 7 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:00,839 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:58:00,841 - __main__ - INFO - Read 7 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:58:00,842 - __main__ - INFO - Attempt 1/3 to send telemetry message with 7 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:58:00,879 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:00,951 - __main__ - INFO - Telemetry message successfully sent with 7 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:58:00,952 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:58:01,995 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:01,996 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:05,352 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:05,353 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'd4aa608b-a2d8-4ea1-a25b-d85de0d139c4', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 93.50647105520031, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:05.353520+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:05,354 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:05,413 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:05,414 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '7d111413-e6dc-4613-aef0-99a9ad7f2869', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 81.2623033954096, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:05.414203+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:05,425 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:07,010 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:08,119 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:08,120 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:10,358 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:10,359 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'af74dad0-df6e-49e6-b49d-b315b2d85604', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 45.82351220797509, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:10.359383+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:10,360 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:10,435 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:10,436 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '871d9f05-b90c-4f72-9ed9-1d319062170f', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 71.04359187365716, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:10.436346+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:10,451 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:13,125 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:14,236 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:14,238 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:15,364 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:15,366 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'fb75fbc0-4b38-4d09-8bac-ba2cdbb1df6b', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 15.979127712210339, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:15.366479+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:15,370 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:15,460 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:15,462 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '8d47929f-576c-49a7-8423-ec94b9675b0e', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 39.82544204555537, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:15.461951+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:15,478 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:15,998 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:58:16,003 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:58:16,004 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:58:16,130 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:58:16,132 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:58:19,253 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:20,368 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:20,369 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:20,383 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:20,384 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'a552982e-1b32-4ff7-8405-bf36c1349095', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 32.28166630305799, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:20.384190+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:20,385 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:20,493 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:20,493 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'e6bc7ec6-1b26-40a7-9897-a3b50059c6aa', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 65.6956862785089, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:20.493938+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:20,494 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:25,383 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:25,398 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:25,399 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '63bdc2ab-063e-40e7-acc3-9c541684bb62', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 68.54256396242724, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:25.399601+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:25,401 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:25,506 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:25,508 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '7f1cbc48-23da-4d49-a392-dffd185b5673', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 16.10926165024872, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:25.508221+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:25,509 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:26,499 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:26,500 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:30,415 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:30,416 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '840bc171-a18a-47b7-8ac4-b84be2161561', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 4.376852694759159, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:30.416620+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:30,418 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:30,524 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:30,525 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '00e85fe6-2632-470f-b810-02e714359b3e', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 4.324062198244583, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:30.525753+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:30,526 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:31,182 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:58:31,184 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:58:31,185 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:58:31,292 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:58:31,293 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:58:31,505 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:32,628 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:32,628 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:35,424 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:35,425 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '4e07da91-47a3-4231-a6aa-f818602742de', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 11.190844399578658, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:35.425502+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:35,426 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:35,533 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:35,534 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '84c551d9-ca5a-462d-9f6b-984109ef9dec', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 35.15203489217969, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:35.534930+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:35,536 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:37,632 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:38,748 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:38,749 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:40,430 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:40,431 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '3878067d-7640-47d4-86ab-a4e465f7dd4e', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 36.10033521391793, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:40.431556+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:40,433 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:40,537 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:40,539 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '0439532c-8e16-45a8-9b3f-2cbfc3bfc25f', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 99.07348613108219, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:40.539314+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:40,541 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:43,755 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:44,870 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:44,871 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:45,442 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:45,443 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'a615b48a-c145-4ee8-8659-55fdb1f9010f', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 81.67618706899343, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:45.443499+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:45,444 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:45,551 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:45,552 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '949c10ad-0cb6-4fb6-82f5-ebcbc7bc9a95', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 5.9131159339710475, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:45.552580+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:45,554 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:46,333 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:58:46,335 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:58:46,336 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:58:46,455 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:58:46,455 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:58:49,875 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:50,455 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:50,456 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'cabaee74-5991-4d7f-b80e-e9bf08f747a7', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 72.54451331896574, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:50.456184+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:50,459 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:50,561 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:50,562 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '93200ce6-2d07-4739-bb5d-43ab45ec7b8f', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 18.19698541842415, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:50.562319+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:50,563 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:50,993 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:50,994 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:58:55,474 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:58:55,475 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '51af0abe-3380-4761-8c93-4d8d41c78553', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 59.880548070782034, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:55.475808+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:58:55,476 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:58:55,568 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:58:55,569 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '651f1953-d47e-4b1e-8878-474bae2af2bd', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 80.08120591291717, 'isSimulated': True, 'timestamp': '2025-02-10T23:58:55.569638+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:58:55,571 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:58:56,001 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:58:57,109 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:58:57,109 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:00,479 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:00,479 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'd305ee10-18de-431c-b95b-4e51de3e5cd7', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 48.456956005637345, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:00.479810+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:00,481 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:00,572 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:00,574 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '9f9d9c22-7795-4da9-b8ec-b569501d89ce', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 26.173216473319815, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:00.574675+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:00,577 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:01,501 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:59:01,503 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:59:01,503 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:59:01,609 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:59:01,610 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:59:02,120 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:03,240 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:03,241 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:05,492 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:05,493 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '385dad39-8592-4408-89aa-8090963777c8', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 4.795875052885257, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:05.493306+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:05,494 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:05,587 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:05,588 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '084bc3c8-f48b-40ea-8cc5-4adadde1db1b', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 14.40893276636831, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:05.588806+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:05,589 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:08,255 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:09,365 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:09,367 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:10,501 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:10,501 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '9c5fd0fa-2318-467c-9942-bd464f63db68', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 8.305408644876522, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:10.501866+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:10,503 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:10,593 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:10,594 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '959bc309-1274-4c56-b731-32ef7720cff9', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 92.9626962171341, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:10.594409+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:10,595 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:14,369 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:15,486 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:15,488 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:15,517 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:15,517 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'ed22f20d-52a7-466c-9444-ed7088e3a409', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 71.66972832564869, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:15.517900+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:15,519 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:15,609 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:15,610 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '0698162e-59ec-4d4e-8737-5d1979bd8fe2', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 17.089035977330035, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:15.610262+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:15,622 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:16,659 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:59:16,661 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:59:16,662 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:59:16,783 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:59:16,784 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:59:20,497 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:20,533 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:20,534 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '136f4679-98c4-4458-8d13-5d0131fa3d67', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 38.34984701376858, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:20.534249+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:20,536 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:20,625 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:20,626 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'e1d42c7f-0f8b-4403-99ec-b0037b28da77', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 65.32237422330856, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:20.626665+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:20,644 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:21,608 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:21,611 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:25,538 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:25,540 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '91896c99-e39e-4cc0-b1b5-6587566ced85', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 60.25157357156266, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:25.540130+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:25,541 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:25,646 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:25,647 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '81112eec-6ced-4e7a-8a91-9498b89296ec', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 66.09641836394611, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:25.647369+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:25,648 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:26,618 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:27,737 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:27,738 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:30,543 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:30,544 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '194bc0ac-e103-41ef-a890-ceae9f3c94c5', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 22.766580218762012, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:30.544690+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:30,545 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:30,654 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:30,655 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '04e631ba-6060-4c5b-acda-d0eadb32897c', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 30.65766439682166, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:30.655416+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:30,656 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:31,854 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:59:31,857 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:59:31,857 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:59:31,970 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:59:31,971 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:59:32,749 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:33,858 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:33,861 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:35,547 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:35,549 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'a6a7bff5-97ee-47bd-b323-4c386f152da4', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 24.85193912613257, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:35.549564+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:35,552 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:35,657 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:35,658 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'a0716781-0b23-4b2f-9a35-c3f94487b902', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 11.669938518521061, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:35.658625+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:35,661 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:38,877 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:39,999 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:40,002 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:40,555 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:40,557 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '630eefac-89db-4d7c-99f5-077801a9acbc', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 24.294713924670198, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:40.557370+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:40,561 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:40,663 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:40,664 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '754d67a1-c296-46ee-a077-5cc5da57090f', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 66.45002955523773, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:40.664591+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:40,667 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:45,015 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:45,571 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:45,573 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'f3dd4dcf-0f0c-4a8b-a542-eaa52d8bd2f5', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 20.822627393562776, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:45.573209+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:45,577 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:45,681 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:45,683 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '50de40b0-e3d4-490a-9f51-a3bd921e2f08', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 85.39893735709755, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:45.683640+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:45,686 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:46,132 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:46,135 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:47,043 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 10:59:47,046 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 10:59:47,047 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 10:59:47,171 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 10:59:47,173 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 10:59:50,590 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:50,592 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '582fd7b2-8a84-46c2-8ea5-f00c19ee5838', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 27.71616605577473, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:50.592416+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:50,598 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:50,698 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:50,699 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'cf9fdf11-f9d4-4c4f-a2de-1511936ff6d3', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 17.50751193733239, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:50.699834+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:50,703 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:51,149 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:52,265 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:52,268 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 10:59:55,601 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 10:59:55,603 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '3029ef9f-0966-461a-9ead-ba3791e864be', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 2.915394721146758, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:55.603659+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 10:59:55,607 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 10:59:55,710 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 10:59:55,711 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'daafea60-139b-4a13-86ba-25af73e08fd6', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 76.36863184339038, 'isSimulated': True, 'timestamp': '2025-02-10T23:59:55.711737+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 10:59:55,716 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 10:59:57,283 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 10:59:58,392 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 10:59:58,395 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 11:00:00,623 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 11:00:00,624 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '913e7e79-5c65-4c0e-b02d-c56952cb8f96', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 83.05087116334035, 'isSimulated': True, 'timestamp': '2025-02-11T00:00:00.624736+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 11:00:00,628 - __main__ - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 11:00:00,731 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 11:00:00,732 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '4c8eedcd-f34b-42c1-82ef-b8b8873794c1', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 74.81310491970355, 'isSimulated': True, 'timestamp': '2025-02-11T00:00:00.732636+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 11:00:00,738 - __main__ - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 11:00:02,272 - __main__ - INFO - Preparing to send telemetry data to IoT Hub - [Sender] send_telemetry_to_iot_hub:307
+2025-02-11 11:00:02,278 - __main__ - INFO - Read 6 records from buffer - [Sender] send_telemetry_to_iot_hub:323
+2025-02-11 11:00:02,279 - __main__ - INFO - Attempt 1/3 to send telemetry message with 6 readings - [Sender] send_telemetry_to_iot_hub:354
+2025-02-11 11:00:02,401 - __main__ - INFO - Telemetry message successfully sent with 6 readings - [Sender] send_telemetry_to_iot_hub:359
+2025-02-11 11:00:02,401 - __main__ - INFO - Send buffer cleared - [Sender] send_telemetry_to_iot_hub:368
+2025-02-11 11:00:03,404 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 11:00:04,521 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 11:00:04,522 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 11:00:05,630 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 11:00:05,630 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'c628d623-2061-44fa-a9e7-7268a2938833', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 60.491859434988335, 'isSimulated': True, 'timestamp': '2025-02-11T00:00:05.630896+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 11:00:05,631 - __main__ - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 11:00:05,742 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 11:00:05,747 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '53bd74b1-cffc-4ed2-8ee1-39f01cd402ea', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 7.448832738189404, 'isSimulated': True, 'timestamp': '2025-02-11T00:00:05.747730+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 11:00:05,749 - __main__ - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 11:00:09,537 - __main__ - INFO - Attempting live reading from PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:171
+2025-02-11 11:00:10,642 - __main__ - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:166
+2025-02-11 11:00:10,642 - __main__ - ERROR - Timeout writing to COM3: Write timeout - [Port_COM3] read_telemetry_from_port:199
+2025-02-11 11:00:10,643 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': 'c9e86281-c6b6-446a-a9fa-84b1b87e3d47', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'portNumber': 'COM1', 'value': 24.961733592551106, 'isSimulated': True, 'timestamp': '2025-02-11T00:00:10.643587+00:00'} - [Port_COM1] read_telemetry_from_port:224
+2025-02-11 11:00:10,644 - __main__ - WARNING - No valid reading obtained for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:227
+2025-02-11 11:00:10,645 - __main__ - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM1] write_telemetry_to_disk:266
+2025-02-11 11:00:10,752 - __main__ - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:166
+2025-02-11 11:00:10,752 - __main__ - INFO - Writing telemetry data to disk: {'readingGUID': '9daf3695-2108-42f7-966f-d4930089347c', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'portNumber': 'COM2', 'value': 54.1342908171719, 'isSimulated': True, 'timestamp': '2025-02-11T00:00:10.752428+00:00'} - [Port_COM2] read_telemetry_from_port:224
+2025-02-11 11:00:10,753 - __main__ - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM2] write_telemetry_to_disk:266
+2025-02-11 11:00:13,654 - __main__ - INFO - Received keyboard interrupt, initiating graceful shutdown... - [MainThread] main:434
+2025-02-11 11:00:13,654 - __main__ - INFO - Shutting down threads... - [MainThread] main:440
+2025-02-11 11:00:13,748 - __main__ - INFO - Azure IoT client shut down - [MainThread] main:459
+2025-02-11 11:09:41,556 - __main__ - INFO - Logging initialized in verbose mode - [MainThread] setup_logging:120
+2025-02-11 11:09:41,557 - __main__ - DEBUG - Verbose logging enabled - additional debug information will be included - [MainThread] setup_logging:123
+2025-02-11 11:09:41,576 - __main__ - INFO - Starting telemetry collection... - [MainThread] main:402
+2025-02-11 11:09:41,576 - __main__ - ERROR - Unexpected error in main: 'portNumber' - [MainThread] main:438
+2025-02-11 11:09:41,577 - __main__ - INFO - Shutting down threads... - [MainThread] main:440
+2025-02-11 11:09:41,578 - __main__ - INFO - Azure IoT client shut down - [MainThread] main:459
+2025-02-11 11:10:08,839 - __main__ - INFO - Logging initialized in verbose mode - [MainThread] setup_logging:120
+2025-02-11 11:10:08,839 - __main__ - DEBUG - Verbose logging enabled - additional debug information will be included - [MainThread] setup_logging:123
+2025-02-11 11:10:08,867 - __main__ - INFO - Starting telemetry collection... - [MainThread] main:402
+2025-02-11 11:10:08,867 - __main__ - ERROR - Unexpected error in main: 'portNumber' - [MainThread] main:438
+2025-02-11 11:10:08,867 - __main__ - INFO - Shutting down threads... - [MainThread] main:440
+2025-02-11 11:10:08,868 - __main__ - INFO - Azure IoT client shut down - [MainThread] main:459
+2025-02-11 11:11:08,798 - __main__ - INFO - Logging initialized in verbose mode - [MainThread] setup_logging:120
+2025-02-11 11:11:08,798 - __main__ - DEBUG - Verbose logging enabled - additional debug information will be included - [MainThread] setup_logging:123
+2025-02-11 11:11:08,817 - __main__ - INFO - Starting telemetry collection... - [MainThread] main:402
+2025-02-11 11:11:08,817 - __main__ - ERROR - Unexpected error in main: 'portNumber' - [MainThread] main:438
+2025-02-11 11:11:08,817 - __main__ - INFO - Shutting down threads... - [MainThread] main:440
+2025-02-11 11:11:08,818 - __main__ - INFO - Azure IoT client shut down - [MainThread] main:459
+2025-02-11 11:12:33,738 - __main__ - INFO - Logging initialized in verbose mode - [MainThread] setup_logging:120
+2025-02-11 11:12:33,738 - __main__ - DEBUG - Verbose logging enabled - additional debug information will be included - [MainThread] setup_logging:123
+2025-02-11 11:12:33,756 - __main__ - INFO - Starting telemetry collection... - [MainThread] main:402
+2025-02-11 11:12:33,756 - __main__ - ERROR - Unexpected error in main: 'portNumber' - [MainThread] main:438
+2025-02-11 11:12:33,756 - __main__ - INFO - Shutting down threads... - [MainThread] main:440
+2025-02-11 11:12:33,758 - __main__ - INFO - Azure IoT client shut down - [MainThread] main:459

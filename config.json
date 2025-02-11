@@ -4,13 +4,13 @@
   "serialNumber":"12343234",
   "organisationId":12,
   "siteId":22,
-  "connectionString": "HostName=thermalmetrix-hub.azure-devices.net;DeviceId=Probe_Simulator;SharedAccessKey=sORuvfPTUv4EwzwYTQi6Fg85UsWzl5lmBpZSwo0P/Rg=",
+  "connectionString": "HostName=thermalmetrix-hub.azure-devices.net;DeviceId=iot01;SharedAccessKey=lmz8nl/5xhMeg6yeW5RiXNNRkj5Y3sK7EQWb1R6+/II=",
   "logFilePath": "C:/DEV/Probe/log/out.log",
   "logRetentionDays": 7,
   "telemetryFilePath": "C:/DEV/Probe/data/telemetry.json",
   "archiveFilePath": "C:/DEV/Probe/data/archive/",
   "archiveTelemetry": false,
-  "secondsBetweenSends":30,
+  "secondsBetweenSends": 15,
   "simulationMode": true,
   "loggingMode": "verbose",
   "serialPorts": [
@@ -20,11 +20,12 @@
       "sensorId":12,
       "sensorTypeId":1,
       "sensorTypeCode":"CONDUCTIVITY",
+      "sensorPositionId": "1223ds343",
       "mininimumSimulationValue":0,
       "maximumSimulationValue":100,
       "mininimumActualValue":0,
       "maximumActualValue":100,
-      "portNumber": "COM1",
+      "gatewayPortID": "COM1",
       "secondsBetweenReads":5
     },
     {
@@ -33,11 +34,12 @@
       "sensorId":15,
       "sensorTypeId":2,
       "sensorTypeCode":"TEMPERATURE",
+      "sensorPositionId": "14vefre343",
       "mininimumSimulationValue":0,
       "maximumSimulationValue":100,
       "mininimumActualValue":0,
       "maximumActualValue":100,
-      "portNumber": "COM2",
+      "gatewayPortID": "COM2",
       "secondsBetweenReads":5
     },
     {
@@ -46,11 +48,12 @@
       "sensorId":28,
       "sensorTypeId":3,
       "sensorTypeCode":"PRESSURE",
+      "sensorPositionId": "1sfrfd343",
       "mininimumSimulationValue":0,
       "maximumSimulationValue":100,
       "mininimumActualValue":0,
       "maximumActualValue":100,
-      "portNumber": "COM3",
+      "gatewayPortID": "COM3",
       "secondsBetweenReads":5
     }
   ]
