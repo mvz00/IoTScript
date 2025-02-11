@@ -1,46 +1,24 @@
 [
   {
-    "readingGUID": "c628d623-2061-44fa-a9e7-7268a2938833",
+    "readingGUID": "a6b34a23-a91f-4956-9a6d-f6bf6f8a563c",
     "sensorId": 12,
     "sensorTypeId": 1,
     "sensorTypeCode": "CONDUCTIVITY",
     "sensorPositionId": "1223ds343",
-    "portNumber": "COM1",
-    "value": 60.491859434988335,
+    "gatewayPortId": "COM1",
+    "value": 55.92196624873992,
     "isSimulated": true,
-    "timestamp": "2025-02-11T00:00:05.630896+00:00"
+    "timestamp": "2025-02-11T00:39:54.211341+00:00"
   },
   {
-    "readingGUID": "53bd74b1-cffc-4ed2-8ee1-39f01cd402ea",
+    "readingGUID": "caa1bb8f-dd47-4c3e-bd6f-cbfa95968d1b",
     "sensorId": 15,
     "sensorTypeId": 2,
     "sensorTypeCode": "TEMPERATURE",
     "sensorPositionId": "14vefre343",
-    "portNumber": "COM2",
-    "value": 7.448832738189404,
+    "gatewayPortId": "COM2",
+    "value": 27.738224938458266,
     "isSimulated": true,
-    "timestamp": "2025-02-11T00:00:05.747730+00:00"
-  },
-  {
-    "readingGUID": "c9e86281-c6b6-446a-a9fa-84b1b87e3d47",
-    "sensorId": 12,
-    "sensorTypeId": 1,
-    "sensorTypeCode": "CONDUCTIVITY",
-    "sensorPositionId": "1223ds343",
-    "portNumber": "COM1",
-    "value": 24.961733592551106,
-    "isSimulated": true,
-    "timestamp": "2025-02-11T00:00:10.643587+00:00"
-  },
-  {
-    "readingGUID": "9daf3695-2108-42f7-966f-d4930089347c",
-    "sensorId": 15,
-    "sensorTypeId": 2,
-    "sensorTypeCode": "TEMPERATURE",
-    "sensorPositionId": "14vefre343",
-    "portNumber": "COM2",
-    "value": 54.1342908171719,
-    "isSimulated": true,
-    "timestamp": "2025-02-11T00:00:10.752428+00:00"
+    "timestamp": "2025-02-11T00:39:54.337010+00:00"
   }
 ]

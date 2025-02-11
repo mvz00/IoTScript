@@ -25,7 +25,7 @@
       "maximumSimulationValue":100,
       "mininimumActualValue":0,
       "maximumActualValue":100,
-      "gatewayPortID": "COM1",
+      "gatewayPortId": "COM1",
       "secondsBetweenReads":5
     },
     {
@@ -39,7 +39,7 @@
       "maximumSimulationValue":100,
       "mininimumActualValue":0,
       "maximumActualValue":100,
-      "gatewayPortID": "COM2",
+      "gatewayPortId": "COM2",
       "secondsBetweenReads":5
     },
     {
@@ -53,7 +53,7 @@
       "maximumSimulationValue":100,
       "mininimumActualValue":0,
       "maximumActualValue":100,
-      "gatewayPortID": "COM3",
+      "gatewayPortId": "COM3",
       "secondsBetweenReads":5
     }
   ]

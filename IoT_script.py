@@ -135,13 +135,13 @@ def clear_old_logs():
                 if log_time > cutoff_time:
                     f.write(line)
 
-def is_port_available(gateway_port_number):
+def is_port_available(gateway_port_id):
     """Check if a serial port is available"""
     available_ports = [p.device for p in serial.tools.list_ports.comports()]
-    return gateway_port_number in available_ports
+    return gateway_port_id in available_ports
 
 def read_telemetry_from_port(port_config):
-    gateway_port_number = port_config["gatewayPortNumber"]
+    gateway_port_id = port_config["gatewayPortId"]
     sensor_id = port_config["sensorId"]
     sensor_position_id = port_config["sensorPositionId"]
     sensor_type_id = port_config["sensorTypeId"]
@@ -153,32 +153,32 @@ def read_telemetry_from_port(port_config):
     max_sim_value = port_config["maximumSimulationValue"]
 
     if not is_active:
-        logger.info(f"Sensor {sensor_type_code} on port {gateway_port_number} is not active. Thread terminating.")
+        logger.info(f"Sensor {sensor_type_code} on port {gateway_port_id} is not active. Thread terminating.")
         return
 
     while not shutdown_event.is_set():
         try:
             if logging.getLogger().isEnabledFor(logging.DEBUG):
-                logger.debug(f"Starting telemetry read cycle for {gateway_port_number} (Simulation: {should_simulate})")
+                logger.debug(f"Starting telemetry read cycle for {gateway_port_id} (Simulation: {should_simulate})")
 
             value = None
             if should_simulate:
-                logger.info(f"Simulating reading for {sensor_type_code} on port {gateway_port_number}")
+                logger.info(f"Simulating reading for {sensor_type_code} on port {gateway_port_id}")
                 value = random.uniform(min_sim_value, max_sim_value)
                 if logging.getLogger().isEnabledFor(logging.DEBUG):
                     logger.debug(f"Generated simulated value for {sensor_type_code}: {value}")
             else:
-                logger.info(f"Attempting live reading from {sensor_type_code} on port {gateway_port_number}")
+                logger.info(f"Attempting live reading from {sensor_type_code} on port {gateway_port_id}")
                 
                 # Check if port exists before trying to open it
-                if not is_port_available(gateway_port_number):
-                    logger.error(f"Port {gateway_port_number} is not available")
+                if not is_port_available(gateway_port_id):
+                    logger.error(f"Port {gateway_port_id} is not available")
                     time.sleep(seconds_between_reads)
                     continue
 
                 try:
                     ser = serial.Serial(
-                        port=gateway_port_number,
+                        port=gateway_port_id,
                         baudrate=9600,
                         timeout=1,
                         write_timeout=1
@@ -190,24 +190,24 @@ def read_telemetry_from_port(port_config):
                             try:
                                 value = float(response)
                                 if logging.getLogger().isEnabledFor(logging.DEBUG):
-                                    logger.debug(f"Read live value from {gateway_port_number}: {value}")
+                                    logger.debug(f"Read live value from {gateway_port_id}: {value}")
                             except ValueError as ve:
-                                logger.error(f"Invalid value received from {gateway_port_number}: '{response}' - {ve}")
+                                logger.error(f"Invalid value received from {gateway_port_id}: '{response}' - {ve}")
                         else:
-                            logger.error(f"No response received from {gateway_port_number} for {sensor_type_code}")
+                            logger.error(f"No response received from {gateway_port_id} for {sensor_type_code}")
                     except serial.SerialTimeoutException as ste:
-                        logger.error(f"Timeout writing to {gateway_port_number}: {ste}")
+                        logger.error(f"Timeout writing to {gateway_port_id}: {ste}")
                     except serial.SerialException as se:
-                        logger.error(f"Error communicating with {gateway_port_number}: {se}")
+                        logger.error(f"Error communicating with {gateway_port_id}: {se}")
                     finally:
                         try:
                             ser.close()
                         except Exception as e:
-                            logger.error(f"Error closing port {gateway_port_number}: {e}")
+                            logger.error(f"Error closing port {gateway_port_id}: {e}")
                 except serial.SerialException as se:
-                    logger.error(f"Could not open port {gateway_port_number}: {se}")
+                    logger.error(f"Could not open port {gateway_port_id}: {se}")
                 except Exception as e:
-                    logger.error(f"Unexpected error accessing {gateway_port_number}: {e}")
+                    logger.error(f"Unexpected error accessing {gateway_port_id}: {e}")
 
             if value is not None:
                 telemetry_data = {
@@ -216,7 +216,7 @@ def read_telemetry_from_port(port_config):
                     "sensorTypeId": sensor_type_id,
                     "sensorTypeCode": sensor_type_code,
                     "sensorPositionId": sensor_position_id,
-                    "gatewayPortNumber": gateway_port_number,
+                    "gatewayPortId": gateway_port_id,
                     "value": value,
                     "isSimulated": should_simulate,
                     "timestamp": datetime.now(timezone.utc).isoformat()
@@ -224,7 +224,7 @@ def read_telemetry_from_port(port_config):
                 logger.info(f"Writing telemetry data to disk: {telemetry_data}")
                 write_telemetry_to_disk(telemetry_data)
             else:
-                logger.warning(f"No valid reading obtained for {sensor_type_code} on port {gateway_port_number}")
+                logger.warning(f"No valid reading obtained for {sensor_type_code} on port {gateway_port_id}")
 
         except Exception as e:
             logger.error(f"Error in read_telemetry_from_port for {sensor_type_code}: {e}")
@@ -408,11 +408,11 @@ def main():
         # Start port reading threads
         for port_config in SERIAL_PORTS:
             if port_config["active"]:
-                thread = Thread(target=read_telemetry_from_port, args=(port_config,), name=f"Port_{port_config['portNumber']}")
+                thread = Thread(target=read_telemetry_from_port, args=(port_config,), name=f"Port_{port_config['gatewayPortId']}")
                 thread.daemon = True
                 thread.start()
                 threads.append(thread)
-                logger.info(f"Started thread for {port_config['sensorTypeCode']} on {port_config['portNumber']}")
+                logger.info(f"Started thread for {port_config['sensorTypeCode']} on {port_config['gatewayPortId']}")
         
         # Start send thread
         send_thread = Thread(target=send_telemetry_to_iot_hub, name="Sender")
