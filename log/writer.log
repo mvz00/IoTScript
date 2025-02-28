@@ -1,0 +1,12 @@
+2025-02-28 12:48:28,293 - telemetry_uploader - INFO - Azure IoT client initialized - [MainThread] main:45
+2025-02-28 12:48:58,301 - telemetry_uploader - INFO - Preparing to send telemetry data to IoT Hub - [MainThread] main:53
+2025-02-28 12:48:58,304 - telemetry_uploader - INFO - Read 24 records from buffer - [MainThread] main:69
+2025-02-28 12:48:58,304 - telemetry_uploader - INFO - Reconnecting to IoT Hub... - [MainThread] main:90
+2025-02-28 12:48:58,495 - telemetry_uploader - INFO - Sending telemetry message with 24 readings - [MainThread] main:97
+2025-02-28 12:48:58,779 - telemetry_uploader - INFO - Send buffer cleared - [MainThread] main:106
+2025-02-28 12:49:28,788 - telemetry_uploader - INFO - Preparing to send telemetry data to IoT Hub - [MainThread] main:53
+2025-02-28 12:49:28,812 - telemetry_uploader - INFO - Read 18 records from buffer - [MainThread] main:69
+2025-02-28 12:49:28,813 - telemetry_uploader - INFO - Sending telemetry message with 18 readings - [MainThread] main:97
+2025-02-28 12:49:28,950 - telemetry_uploader - INFO - Send buffer cleared - [MainThread] main:106
+2025-02-28 12:49:31,038 - telemetry_uploader - INFO - Shutting down uploader... - [MainThread] main:125
+2025-02-28 12:49:31,039 - telemetry_uploader - INFO - Azure IoT client shut down - [MainThread] main:130

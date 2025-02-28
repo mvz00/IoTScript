@@ -8,8 +8,9 @@ import serial.tools.list_ports
 from threading import Thread, Event
 import json
 from common import setup_logging, get_config, get_active_buffer, write_lock
+from pathlib import Path
 
-logger = setup_logging("telemetry_reader")
+logger = setup_logging("telemetry_reader", log_file_path=Path("log/reader.log"))
 config = get_config()
 
 def is_port_available(port_number):

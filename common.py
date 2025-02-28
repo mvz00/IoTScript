@@ -59,7 +59,7 @@ def get_config():
         initialize()
     return config
 
-def setup_logging(module_name):
+def setup_logging(module_name, log_file_path=None):
     if config is None:
         initialize()
     
@@ -71,10 +71,12 @@ def setup_logging(module_name):
     logger = logging.getLogger(module_name)
     
     # Ensure log directory exists
-    LOG_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    if log_file_path is None:
+        log_file_path = LOG_FILE_PATH
+    log_file_path.parent.mkdir(parents=True, exist_ok=True)
     
     # Setup handlers
-    file_handler = logging.FileHandler(LOG_FILE_PATH)
+    file_handler = logging.FileHandler(log_file_path)
     file_handler.setLevel(log_config["file_level"])
     console_handler = logging.StreamHandler()
     console_handler.setLevel(log_config["console_level"])

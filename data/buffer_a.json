@@ -1,0 +1,35 @@
+[
+  {
+    "readingGUID": "05062a26-1530-4cb2-b682-e8941a569087",
+    "sensorId": 12,
+    "sensorTypeId": 1,
+    "sensorTypeCode": "CONDUCTIVITY",
+    "sensorPositionId": "1223ds343",
+    "gatewayPortId": "COM1",
+    "value": 90.02008883323487,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T01:49:31.869804+00:00"
+  },
+  {
+    "readingGUID": "f2a722e3-96db-4008-8dd3-c44e692674b1",
+    "sensorId": 15,
+    "sensorTypeId": 2,
+    "sensorTypeCode": "TEMPERATURE",
+    "sensorPositionId": "14vefre343",
+    "gatewayPortId": "COM2",
+    "value": 78.22254450311141,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T01:49:31.914559+00:00"
+  },
+  {
+    "readingGUID": "88082ac9-66b2-443a-89ff-aafdaf20458c",
+    "sensorId": 28,
+    "sensorTypeId": 3,
+    "sensorTypeCode": "PRESSURE",
+    "sensorPositionId": "1sfrfd343",
+    "gatewayPortId": "COM3",
+    "value": 81.84316180413813,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T01:49:31.961797+00:00"
+  }
+]

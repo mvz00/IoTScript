@@ -1,0 +1,231 @@
+2025-02-28 12:48:21,601 - telemetry_reader - INFO - Starting telemetry collection... - [MainThread] main:129
+2025-02-28 12:48:21,602 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:21,602 - telemetry_reader - INFO - Started thread for CONDUCTIVITY on COM1 - [MainThread] main:141
+2025-02-28 12:48:21,602 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:21,602 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:21,602 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 77.0828217036056 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:21,602 - telemetry_reader - INFO - Started thread for TEMPERATURE on COM2 - [MainThread] main:141
+2025-02-28 12:48:21,602 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:21,603 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'c02d83b9-3364-4efe-8937-f61750fdb284', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 77.0828217036056, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:21.603367+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:21,603 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:21,603 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 22.943131233571844 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:21,603 - telemetry_reader - INFO - Started thread for PRESSURE on COM3 - [MainThread] main:141
+2025-02-28 12:48:21,604 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:21,604 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '7f8015e2-f52f-42fc-9be0-4d47cb1dd9c7', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 22.943131233571844, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:21.604121+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:21,604 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 43.95936980979016 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:21,604 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '6124ba26-d46d-48d1-be98-47d0c10e7bb2', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 43.95936980979016, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:21.604615+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:21,605 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:21,617 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:21,628 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:26,614 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:26,614 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:26,615 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 8.452238856261706 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:26,615 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'd300ca4e-44e3-49e8-8151-9cfd0865bc31', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 8.452238856261706, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:26.615293+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:26,626 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:26,630 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:26,630 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:26,630 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:26,631 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:26,631 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 90.77443767841545 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:26,631 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 49.91475547231122 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:26,631 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'e2863e06-605e-472f-8e6b-a0c1e5b6657b', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 90.77443767841545, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:26.631474+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:26,631 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '83da6574-b2c0-4879-b7ce-1294205b0128', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 49.91475547231122, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:26.631603+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:26,641 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:26,656 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:31,637 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:31,638 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:31,638 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 99.99654066476725 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:31,638 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '71d69077-8684-4285-8db8-58a119b7fbaa', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 99.99654066476725, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:31.638591+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:31,653 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:31,654 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:31,654 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 27.2661679091588 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:31,654 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'a83e96b3-804f-4190-b906-c2a0f78d5bbf', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 27.2661679091588, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:31.654949+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:31,659 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 7 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:31,669 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:31,669 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:31,670 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 26.327701714645013 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:31,670 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '76328ce6-422b-4896-96fd-6603e20af7d3', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 26.327701714645013, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:31.670406+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:31,671 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 8 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:31,682 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 9 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:36,662 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:36,662 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:36,662 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 82.7414702017351 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:36,662 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'ed4ad6e6-470a-4539-8d88-acb40a2961db', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 82.7414702017351, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:36.662938+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:36,677 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 10 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:36,677 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:36,677 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:36,678 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 10.83517240569275 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:36,678 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '6c2dda61-13ed-4c90-b2a0-e78f5549cc5b', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 10.83517240569275, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:36.678437+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:36,687 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 11 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:36,692 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:36,693 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:36,693 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 32.272414468219665 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:36,694 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '99202fe4-3a3c-4dd6-a1a7-01392bad3233', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 32.272414468219665, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:36.694128+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:36,708 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 12 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:41,677 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:41,678 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:41,678 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 37.35600784880074 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:41,678 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'e517cab6-2bb8-4b30-922a-12428c142340', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 37.35600784880074, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:41.678368+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:41,693 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:41,693 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 13 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:41,694 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:41,694 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 42.66456874449306 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:41,694 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'fe3e3c1f-badd-4001-a93c-ca6cbd9bb814', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 42.66456874449306, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:41.694777+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:41,704 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 14 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:41,724 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:41,725 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:41,725 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 5.915386073017492 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:41,725 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '3e018cc8-c966-48d5-ad78-bf5a053b5d7b', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 5.915386073017492, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:41.725888+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:41,743 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 15 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:46,699 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:46,699 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:46,699 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 15.86988615900462 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:46,700 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'f00038d3-ddd9-4c6c-9d1a-0f8d71294ba2', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 15.86988615900462, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:46.700112+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:46,701 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 16 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:46,715 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:46,715 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:46,716 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 58.65057200695944 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:46,716 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'e30ca8b3-573e-49e0-8964-17c14cd22406', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 58.65057200695944, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:46.716164+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:46,727 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 17 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:46,745 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:46,746 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:46,746 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 36.381869552200605 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:46,746 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'e44da54e-5d76-4ee0-b206-60dc68e0bea8', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 36.381869552200605, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:46.746647+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:46,758 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 18 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:51,715 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:51,715 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:51,716 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 81.89686981157 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:51,716 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '1d8c2216-3626-4f31-aad5-50d82d754f19', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 81.89686981157, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:51.716205+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:51,717 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 19 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:51,731 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:51,731 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:51,731 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 42.665800744717764 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:51,731 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '2379e48e-5bd6-48c7-a5ce-3fb6a98c7fbe', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 42.665800744717764, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:51.731965+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:51,745 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 20 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:51,762 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:51,763 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:51,763 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 55.77956819233674 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:51,763 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '98ce4014-2787-461b-afd7-3a3f5201483c', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 55.77956819233674, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:51.763724+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:51,777 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 21 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:48:56,725 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:48:56,726 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:48:56,726 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 67.85410626623955 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:48:56,726 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '6336d5ab-8210-4660-ab87-9acdf59c7251', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 67.85410626623955, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:56.726747+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:48:56,727 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 22 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:48:56,757 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:48:56,758 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:48:56,759 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 64.7899696048712 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:48:56,759 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '6bd08ca8-c59b-40ae-be65-91956e13c00d', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 64.7899696048712, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:56.759442+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:48:56,776 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 23 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:48:56,788 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:48:56,788 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:48:56,789 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 50.84065842661606 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:48:56,789 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '239959f6-388b-415e-9701-da3ad38f2b71', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 50.84065842661606, 'isSimulated': True, 'timestamp': '2025-02-28T01:48:56.789289+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:48:56,801 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 24 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:01,741 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:01,742 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:01,742 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 99.76497284184242 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:01,742 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '48a8e806-b6a4-4b61-86ca-c791e4618bdc', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 99.76497284184242, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:01.742678+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:01,744 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:01,786 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:01,787 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:01,787 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 71.7164755614034 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:01,787 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'ca29196c-7633-43eb-bc45-77dfc63a20f5', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 71.7164755614034, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:01.787777+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:01,800 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:01,802 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:01,802 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:01,802 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 99.93736125976051 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:01,803 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'df4e611e-4d50-4198-af98-c2ae961390cf', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 99.93736125976051, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:01.803071+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:01,812 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:06,746 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:06,747 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:06,747 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 20.434746895448708 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:06,747 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '58d38483-acdd-4236-81f7-06c67b190606', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 20.434746895448708, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:06.747603+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:06,760 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 4 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:06,808 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:06,809 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:06,809 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 94.575792122771 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:06,810 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '6a9b4694-23c1-4190-aa9a-c0213d6278ad', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 94.575792122771, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:06.810411+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:06,822 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 5 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:06,824 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:06,825 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:06,825 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 25.36720678516574 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:06,825 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '53592915-9c95-420a-a0ce-f2e9a22eeada', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 25.36720678516574, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:06.825526+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:06,836 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 6 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:11,770 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:11,771 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:11,772 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 55.330535595907534 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:11,772 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '11f86861-223f-4334-b80d-90db981060e4', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 55.330535595907534, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:11.772427+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:11,789 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 7 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:11,834 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:11,834 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:11,834 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 66.57733774124209 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:11,834 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'ac13a24a-9678-4f9c-8a67-48491ff8cd87', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 66.57733774124209, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:11.834891+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:11,846 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 8 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:11,849 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:11,850 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:11,850 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 55.27713673975183 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:11,850 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '655ecd58-e046-4fef-9d27-353174022f52', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 55.27713673975183, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:11.850363+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:11,862 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 9 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:16,790 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:16,791 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:16,791 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 84.41467019710825 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:16,792 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '169b4e61-2983-449a-8d22-b5621523c1d6', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 84.41467019710825, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:16.792187+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:16,809 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 10 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:16,851 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:16,852 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:16,852 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 12.303244439072724 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:16,852 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'c036d76d-f6f9-4c15-838e-a3bd2838aa39', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 12.303244439072724, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:16.852607+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:16,865 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 11 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:16,867 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:16,867 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:16,868 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 82.41982366332073 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:16,868 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '3832704a-6e74-4733-b979-73b23ac57a2d', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 82.41982366332073, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:16.868213+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:16,878 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 12 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:21,825 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:21,826 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:21,826 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 13.046866323551798 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:21,826 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '9a74fe73-2741-4d4e-bb75-633967282f06', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 13.046866323551798, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:21.826505+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:21,839 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 13 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:21,873 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:21,874 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:21,874 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 25.088750324921794 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:21,874 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '9003ddab-74f1-49d0-89c5-37bca85a0606', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 25.088750324921794, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:21.874943+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:21,889 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:21,889 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:21,889 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 14 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:21,890 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 88.8188683311675 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:21,890 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '193c3217-d2b1-4e1a-85f0-83beeddbdd1b', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 88.8188683311675, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:21.890269+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:21,902 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 15 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:26,846 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:26,847 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:26,848 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 35.7767575376624 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:26,848 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'a7cb83cf-d398-4278-897d-e30680c45996', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 35.7767575376624, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:26.848283+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:26,861 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 16 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:26,893 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:26,894 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:26,894 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 45.80539452781414 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:26,895 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '30302f49-2fde-4751-a0ce-3f2076b25607', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 45.80539452781414, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:26.895175+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:26,905 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 17 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:26,915 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:26,925 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:26,925 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 14.469703771235064 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:26,926 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '74951b32-8f58-4029-8bc8-07a8ed0ded3f', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 14.469703771235064, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:26.926091+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:26,950 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 18 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:31,867 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM1 (Simulation: True) - [Port_COM1] read_telemetry_from_port:62
+2025-02-28 12:49:31,868 - telemetry_reader - INFO - Simulating reading for CONDUCTIVITY on port COM1 - [Port_COM1] read_telemetry_from_port:66
+2025-02-28 12:49:31,869 - telemetry_reader - DEBUG - Generated simulated value for CONDUCTIVITY: 90.02008883323487 - [Port_COM1] read_telemetry_from_port:69
+2025-02-28 12:49:31,869 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '05062a26-1530-4cb2-b682-e8941a569087', 'sensorId': 12, 'sensorTypeId': 1, 'sensorTypeCode': 'CONDUCTIVITY', 'sensorPositionId': '1223ds343', 'gatewayPortId': 'COM1', 'value': 90.02008883323487, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:31.869804+00:00'} - [Port_COM1] read_telemetry_from_port:114
+2025-02-28 12:49:31,871 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 1 - [Port_COM1] write_telemetry_to_disk:39
+2025-02-28 12:49:31,913 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM2 (Simulation: True) - [Port_COM2] read_telemetry_from_port:62
+2025-02-28 12:49:31,914 - telemetry_reader - INFO - Simulating reading for TEMPERATURE on port COM2 - [Port_COM2] read_telemetry_from_port:66
+2025-02-28 12:49:31,914 - telemetry_reader - DEBUG - Generated simulated value for TEMPERATURE: 78.22254450311141 - [Port_COM2] read_telemetry_from_port:69
+2025-02-28 12:49:31,914 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': 'f2a722e3-96db-4008-8dd3-c44e692674b1', 'sensorId': 15, 'sensorTypeId': 2, 'sensorTypeCode': 'TEMPERATURE', 'sensorPositionId': '14vefre343', 'gatewayPortId': 'COM2', 'value': 78.22254450311141, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:31.914559+00:00'} - [Port_COM2] read_telemetry_from_port:114
+2025-02-28 12:49:31,936 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 2 - [Port_COM2] write_telemetry_to_disk:39
+2025-02-28 12:49:31,960 - telemetry_reader - DEBUG - Starting telemetry read cycle for COM3 (Simulation: True) - [Port_COM3] read_telemetry_from_port:62
+2025-02-28 12:49:31,961 - telemetry_reader - INFO - Simulating reading for PRESSURE on port COM3 - [Port_COM3] read_telemetry_from_port:66
+2025-02-28 12:49:31,961 - telemetry_reader - DEBUG - Generated simulated value for PRESSURE: 81.84316180413813 - [Port_COM3] read_telemetry_from_port:69
+2025-02-28 12:49:31,961 - telemetry_reader - INFO - Writing telemetry data to disk: {'readingGUID': '88082ac9-66b2-443a-89ff-aafdaf20458c', 'sensorId': 28, 'sensorTypeId': 3, 'sensorTypeCode': 'PRESSURE', 'sensorPositionId': '1sfrfd343', 'gatewayPortId': 'COM3', 'value': 81.84316180413813, 'isSimulated': True, 'timestamp': '2025-02-28T01:49:31.961797+00:00'} - [Port_COM3] read_telemetry_from_port:114
+2025-02-28 12:49:31,975 - telemetry_reader - INFO - Telemetry data written to buffer. Total records: 3 - [Port_COM3] write_telemetry_to_disk:39
+2025-02-28 12:49:34,279 - telemetry_reader - INFO - Shutting down telemetry collection... - [MainThread] main:147
+2025-02-28 12:49:34,280 - telemetry_reader - INFO - Telemetry collection stopped - [MainThread] main:152

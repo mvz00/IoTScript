@@ -12,7 +12,7 @@ from common import (
     write_lock, ARCHIVE_FILE_PATH
 )
 
-logger = setup_logging("telemetry_uploader")
+logger = setup_logging("telemetry_uploader", log_file_path=Path("log/writer.log"))
 config = get_config()
 
 def sanitize_filename(timestamp):
