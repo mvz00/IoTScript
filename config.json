@@ -10,7 +10,7 @@
   "telemetryFilePath": "C:/DEV/Probe/data/telemetry.json",
   "archiveFilePath": "C:/DEV/Probe/data/archive/",
   "archiveTelemetry": false,
-  "secondsBetweenSends": 600,
+  "secondsBetweenSends": 30,
   "simulationMode": true,
   "loggingMode": "verbose",
   "serialPorts": [
@@ -26,7 +26,7 @@
       "mininimumActualValue":0,
       "maximumActualValue":100,
       "gatewayPortId": "COM1",
-      "secondsBetweenReads":60
+      "secondsBetweenReads":5
     },
     {
       "active":true,
@@ -40,11 +40,11 @@
       "mininimumActualValue":0,
       "maximumActualValue":100,
       "gatewayPortId": "COM2",
-      "secondsBetweenReads":60
+      "secondsBetweenReads":5
     },
     {
       "active":true,
-      "simulate": false,
+      "simulate": true,
       "sensorId":28,
       "sensorTypeId":3,
       "sensorTypeCode":"PRESSURE",
@@ -54,7 +54,7 @@
       "mininimumActualValue":0,
       "maximumActualValue":100,
       "gatewayPortId": "COM3",
-      "secondsBetweenReads":60
+      "secondsBetweenReads":5
     }
   ]
 }
