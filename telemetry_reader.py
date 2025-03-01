@@ -118,25 +118,11 @@ def read_telemetry_from_port(port_config, shutdown_event):
                     logger.debug(f"[SERIAL-{cycle_count}] Serial port {port_number} opened successfully")
                     
                     try:
-                        # Modbus read command parameters based on sensor type
-                        if sensor_type_code == "TEMPERATURE":
-                            device_address = port_config.get("temperatureDeviceAddress", 5)
-                            function_code = port_config.get("temperatureFunctionCode", 3)
-                            start_address = port_config.get("temperatureStartAddress", 0)
-                            num_registers = port_config.get("temperatureNumRegisters", 1)
-                        elif sensor_type_code == "CONDUCTIVITY":
-                            device_address = port_config.get("conductivityDeviceAddress", 4)
-                            function_code = port_config.get("conductivityFunctionCode", 3)
-                            start_address = port_config.get("conductivityStartAddress", 1)
-                            num_registers = port_config.get("conductivityNumRegisters", 2)
-                        elif sensor_type_code == "PRESSURE":
-                            device_address = port_config.get("pressureDeviceAddress", 4)
-                            function_code = port_config.get("pressureFunctionCode", 3)
-                            start_address = port_config.get("pressureStartAddress", 2)
-                            num_registers = port_config.get("pressureNumRegisters", 1)
-                        else:
-                            logger.error(f"[MODBUS-{cycle_count}] Unknown sensor type code: {sensor_type_code}")
-                            continue
+                        # Modbus read command parameters - now consistent across all sensor types
+                        device_address = port_config.get("deviceAddress", 1)
+                        function_code = port_config.get("functionCode", 3)
+                        start_address = port_config.get("startAddress", 0)
+                        num_registers = port_config.get("numRegisters", 1)
 
                         logger.debug(f"[MODBUS-{cycle_count}] Parameters - Device: 0x{device_address:02X}, Function: 0x{function_code:02X}, Address: 0x{start_address:04X}, Registers: {num_registers}")
                         
@@ -158,22 +144,16 @@ def read_telemetry_from_port(port_config, shutdown_event):
                         if response:
                             logger.debug(f"[MODBUS-{cycle_count}] Received raw response: {response.hex()}")
                             
-                            # Process response based on sensor type
-                            if sensor_type_code == "TEMPERATURE":
-                                temperature_hex = response[3:5]
-                                temperature = int.from_bytes(temperature_hex, byteorder='big') * 0.1
-                                value = temperature
-                                logger.debug(f"[MODBUS-{cycle_count}] Parsed temperature value: {value} (raw hex: {temperature_hex.hex()})")
-                            elif sensor_type_code == "CONDUCTIVITY":
-                                conductivity_hex = response[3:7]
-                                conductivity = int.from_bytes(conductivity_hex, byteorder='big') * 0.001
-                                value = conductivity
-                                logger.debug(f"[MODBUS-{cycle_count}] Parsed conductivity value: {value} (raw hex: {conductivity_hex.hex()})")
-                            elif sensor_type_code == "PRESSURE":
-                                pressure_hex = response[3:5]
-                                pressure = int.from_bytes(pressure_hex, byteorder='big') * 0.1
-                                value = pressure
-                                logger.debug(f"[MODBUS-{cycle_count}] Parsed pressure value: {value} (raw hex: {pressure_hex.hex()})")
+                            # Process response - standardized for all sensor types
+                            # Get data bytes based on number of registers
+                            data_bytes = response[3:3 + num_registers * 2]
+                            
+                            # Convert data to a value - use a standardized scaling factor of 0.1
+                            # This can be adjusted based on your specific needs or added as a config parameter
+                            raw_value = int.from_bytes(data_bytes, byteorder='big')
+                            value = raw_value * 0.1
+                            
+                            logger.debug(f"[MODBUS-{cycle_count}] Parsed value: {value} (raw hex: {data_bytes.hex()})")
                             
                             serial_end_time = time.time()
                             logger.debug(f"[SERIAL-{cycle_count}] Serial communication completed in {serial_end_time - serial_start_time:.3f} seconds")
