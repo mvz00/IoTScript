@@ -2,11 +2,11 @@ import time
 import uuid
 import logging
 import sys
-from io import StringIO
+import traceback
 from datetime import datetime, timezone
 from azure.iot.device import IoTHubDeviceClient, Message, exceptions
 import json
-from threading import Event, Thread
+from threading import Event, Thread, Lock
 import gzip
 import shutil
 import socket
@@ -21,6 +21,9 @@ config = get_config()
 
 # Global shutdown event that can be set from background threads
 global_shutdown_event = Event()
+
+# Client lock to prevent multiple connection issues
+client_lock = Lock()
 
 def sanitize_filename(timestamp):
     return timestamp.replace(':', '-').replace('+', '_plus_')
@@ -57,12 +60,13 @@ def handle_connection_state_change(connected):
     if connected:
         logger.info("Device connected to IoT Hub")
     else:
-        logger.warning("Device disconnected from IoT Hub")
+        # Just log this, don't take any action
+        logger.info("Device disconnected from IoT Hub")
 
 def handle_background_exception(e):
     """Handle background exceptions from the IoT client"""
-    logger.error(f"Background exception: {e}")
-    # Don't need to disconnect here as our main code will handle reconnection
+    # Just log the error, don't take any action
+    logger.debug(f"Background exception (safe to ignore): {e}")
 
 def create_client():
     """Create and configure an IoT Hub client with proper exception handlers"""
@@ -71,56 +75,91 @@ def create_client():
         config["connectionString"]
     )
     
-    # Register handlers
+    # Register handlers, but don't log every background exception 
+    # as these are expected during client lifecycle on Raspberry Pi
     client.on_background_exception = handle_background_exception
     client.on_connection_state_change = handle_connection_state_change
     
     return client
 
-def send_single_message(telemetry_data):
-    """Create a fresh client, send a single message, and shut it down properly"""
+def safe_client_shutdown(client):
+    """Safely shut down a client without exceptions"""
+    if client is None:
+        return
+        
     try:
-        # Create a brand new client for this message
-        message_client = create_client()
+        if client.connected:
+            client.disconnect()
+    except:
+        pass
         
-        # Connect
-        message_client.connect()
-        logger.info("Connected to IoT Hub for message send")
-        
-        # Create the payload
-        payload = {
-            "payloadGUID": str(uuid.uuid4()),
-            "gatewayId": config["gatewayId"],
-            "modelNumber": config["modelNumber"],
-            "serialNumber": config["serialNumber"],
-            "organisationId": config["organisationId"],
-            "siteId": config["siteId"],
-            "telemetry": telemetry_data,
-            "timestamp": datetime.now(timezone.utc).isoformat()
-        }
-        
-        # Create and send the message
-        telemetry_message = Message(json.dumps(payload))
-        telemetry_message.content_type = "application/json"
-        telemetry_message.content_encoding = "utf-8"
-        
-        logger.info(f"Sending telemetry message with {len(telemetry_data)} readings")
-        message_client.send_message(telemetry_message)
-        logger.info("Message sent successfully")
-        
-        # Explicitly shut down the client
-        message_client.shutdown()
-        logger.info("Client shut down after successful send")
-        
-        return True
-    except Exception as e:
-        logger.error(f"Error sending message: {e}", exc_info=True)
-        try:
-            if 'message_client' in locals():
-                message_client.shutdown()
-        except:
-            pass
-        return False
+    try:
+        client.shutdown()
+    except:
+        pass
+    
+    logger.info("Client resources released")
+
+def send_message_with_retry(telemetry_data, shutdown_event):
+    """Send a single message with retry logic"""
+    max_retries = 3
+    retry_count = 0
+    
+    while retry_count < max_retries and not shutdown_event.is_set():
+        with client_lock:  # Ensure we don't have overlapping client operations
+            client = None
+            try:
+                # Create a fresh client for each attempt
+                client = create_client()
+                
+                # Connect to IoT Hub
+                client.connect()
+                logger.info("Connected to IoT Hub for message send")
+                
+                # Create the payload
+                payload = {
+                    "payloadGUID": str(uuid.uuid4()),
+                    "gatewayId": config["gatewayId"],
+                    "modelNumber": config["modelNumber"],
+                    "serialNumber": config["serialNumber"],
+                    "organisationId": config["organisationId"],
+                    "siteId": config["siteId"],
+                    "telemetry": telemetry_data,
+                    "timestamp": datetime.now(timezone.utc).isoformat()
+                }
+                
+                # Create and send the message
+                telemetry_message = Message(json.dumps(payload))
+                telemetry_message.content_type = "application/json"
+                telemetry_message.content_encoding = "utf-8"
+                
+                logger.info(f"Sending telemetry message with {len(telemetry_data)} readings")
+                # Send the message and wait for the result
+                client.send_message(telemetry_message)
+                logger.info("Message sent successfully")
+                
+                # Clean shutdown
+                safe_client_shutdown(client)
+                
+                # Message sent successfully
+                return True
+                
+            except Exception as e:
+                retry_count += 1
+                logger.error(f"Error on send attempt {retry_count}: {str(e)}")
+                
+                # Clean up client resources
+                safe_client_shutdown(client)
+                
+                if retry_count < max_retries:
+                    # Wait with exponential backoff
+                    wait_time = 5 * retry_count
+                    logger.info(f"Retrying in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                else:
+                    logger.error("Max retries reached. Failed to send message.")
+    
+    return False
 
 def safe_send_telemetry(telemetry_data, shutdown_event):
     """Send telemetry with proper error handling and buffer management"""
@@ -129,43 +168,16 @@ def safe_send_telemetry(telemetry_data, shutdown_event):
         return True
     
     try:
-        success = False
-        retry_count = 0
-        max_retries = 5
+        # Check internet connection first
+        if not check_internet_connection():
+            logger.warning("No internet connection available. Will retry later.")
+            return False
         
-        while retry_count < max_retries and not success and not shutdown_event.is_set():
-            # Check internet connection first
-            if not check_internet_connection():
-                logger.warning("No internet connection available, waiting 15 seconds...")
-                time.sleep(15)
-                retry_count += 1
-                continue
-            
-            # Use a fresh client for each attempt
-            try:
-                # Send the message with a fresh client
-                success = send_single_message(telemetry_data)
-                
-                if success:
-                    break
-                    
-            except exceptions.ConnectionDroppedError as e:
-                retry_count += 1
-                logger.error(f"Connection dropped (attempt {retry_count}/{max_retries}): {e}")
-                
-                # Exponential backoff with a cap
-                wait_time = min(60, 5 * retry_count)
-                logger.info(f"Waiting {wait_time} seconds before retry...")
-                time.sleep(wait_time)
-                
-            except Exception as e:
-                retry_count += 1
-                logger.error(f"Failed to send telemetry message: {e}", exc_info=True)
-                time.sleep(10)
+        # Send message with retry logic
+        return send_message_with_retry(telemetry_data, shutdown_event)
         
-        return success
     except Exception as e:
-        logger.error(f"Error in safe_send_telemetry: {e}", exc_info=True)
+        logger.error(f"Unexpected error in safe_send_telemetry: {e}")
         return False
 
 def main():
@@ -210,9 +222,7 @@ def main():
                                     send_buffer.unlink(missing_ok=True)
                                     logger.info("Send buffer cleared")
                             else:
-                                logger.error("Failed to send telemetry after maximum retries")
-                                # Keep the buffer for next attempt
-                                logger.info("Buffer will be retained for next send attempt")
+                                logger.warning("Failed to send telemetry. Buffer will be retained for next attempt.")
                     
                     except Exception as e:
                         logger.error(f"Error processing send buffer: {e}")
