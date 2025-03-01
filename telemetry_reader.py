@@ -9,6 +9,7 @@ from threading import Thread, Event
 import json
 from common import setup_logging, get_config, get_active_buffer, write_lock
 from pathlib import Path
+import bytes
 
 logger = setup_logging("telemetry_reader", log_file_path=Path("log/reader.log"))
 config = get_config()
@@ -40,6 +41,18 @@ def write_telemetry_to_disk(data):
     except Exception as e:
         logger.error(f"Error writing telemetry to disk: {e}")
 
+def calculate_crc(data):
+    crc = 0xFFFF
+    for pos in data:
+        crc ^= pos
+        for _ in range(8):
+            if (crc & 0x0001) != 0:
+                crc >>= 1
+                crc ^= 0xA001
+            else:
+                crc >>= 1
+    return crc.to_bytes(2, byteorder='little')
+
 def read_telemetry_from_port(port_config, shutdown_event):
     port_number = port_config["gatewayPortId"]
     sensor_id = port_config["sensorId"]
@@ -52,52 +65,134 @@ def read_telemetry_from_port(port_config, shutdown_event):
     min_sim_value = port_config["mininimumSimulationValue"]
     max_sim_value = port_config["maximumSimulationValue"]
 
+    logger.info(f"[INIT] Sensor thread initialized - Port: {port_number}, SensorID: {sensor_id}, Type: {sensor_type_code}, Position: {sensor_position_id}")
+    logger.info(f"[INIT] Configuration - Active: {is_active}, Simulate: {should_simulate}, Read Interval: {seconds_between_reads}s")
+    
     if not is_active:
-        logger.info(f"Sensor {sensor_type_code} on port {port_number} is not active. Thread terminating.")
+        logger.info(f"[SHUTDOWN] Sensor {sensor_type_code} on port {port_number} is not active. Thread terminating.")
         return
 
+    cycle_count = 0
+    
     while not shutdown_event.is_set():
+        cycle_start_time = time.time()
+        cycle_count += 1
+        
         try:
-            if logger.isEnabledFor(logging.DEBUG):  # Changed from logging.getLogger() to logger
-                logger.debug(f"Starting telemetry read cycle for {port_number} (Simulation: {should_simulate})")
+            logger.info(f"[CYCLE-{cycle_count}] Starting telemetry read cycle for {sensor_type_code} on port {port_number}")
+            logger.debug(f"[CYCLE-{cycle_count}] Details - Simulation: {should_simulate}, SimRange: [{min_sim_value}-{max_sim_value}]")
 
             value = None
             if should_simulate:
-                logger.info(f"Simulating reading for {sensor_type_code} on port {port_number}")
+                logger.info(f"[SIM-{cycle_count}] Simulating reading for {sensor_type_code} on port {port_number}")
                 value = random.uniform(min_sim_value, max_sim_value)
-                if logger.isEnabledFor(logging.DEBUG):  # Changed here too
-                    logger.debug(f"Generated simulated value for {sensor_type_code}: {value}")
+                logger.info(f"[SIM-{cycle_count}] Generated simulated value: {value}")
             else:
-                logger.info(f"Attempting live reading from {sensor_type_code} on port {port_number}")
+                logger.info(f"[LIVE-{cycle_count}] Attempting live reading from {sensor_type_code} on port {port_number}")
                 
                 if not is_port_available(port_number):
-                    logger.error(f"Port {port_number} is not available")
+                    logger.error(f"[LIVE-{cycle_count}] Port {port_number} is not available. Available ports: {[p.device for p in serial.tools.list_ports.comports()]}")
                     time.sleep(seconds_between_reads)
                     continue
 
                 try:
+                    logger.debug(f"[SERIAL-{cycle_count}] Opening serial port {port_number}")
+                    serial_start_time = time.time()
+                    
+                    # Log serial port configuration
+                    baud_rate = port_config.get("baudRate", 9600)
+                    data_bits = port_config.get("dataBits", 8)
+                    parity = port_config.get("parity", "None")
+                    stop_bits = port_config.get("stopBits", 1)
+                    
+                    logger.debug(f"[SERIAL-{cycle_count}] Configuration - Baud: {baud_rate}, DataBits: {data_bits}, Parity: {parity}, StopBits: {stop_bits}")
+                    
                     ser = serial.Serial(
                         port=port_number,
-                        baudrate=9600,
+                        baudrate=baud_rate,
+                        bytesize=serial.EIGHTBITS if data_bits == 8 else serial.SEVENBITS,
+                        parity=serial.PARITY_NONE if parity == "None" else serial.PARITY_EVEN,
+                        stopbits=serial.STOPBITS_ONE if stop_bits == 1 else serial.STOPBITS_TWO,
                         timeout=1,
                         write_timeout=1
                     )
+                    logger.debug(f"[SERIAL-{cycle_count}] Serial port {port_number} opened successfully")
+                    
                     try:
-                        ser.write(f'READ_{sensor_type_code}\n'.encode())
-                        response = ser.readline().decode('utf-8').strip()
-                        if response:
-                            try:
-                                value = float(response)
-                                if logger.isEnabledFor(logging.DEBUG):  # Changed here too
-                                    logger.debug(f"Read live value from {port_number}: {value}")
-                            except ValueError as ve:
-                                logger.error(f"Invalid value received from {port_number}: '{response}' - {ve}")
+                        # Modbus read command parameters based on sensor type
+                        if sensor_type_code == "TEMPERATURE":
+                            device_address = port_config.get("temperatureDeviceAddress", 5)
+                            function_code = port_config.get("temperatureFunctionCode", 3)
+                            start_address = port_config.get("temperatureStartAddress", 0)
+                            num_registers = port_config.get("temperatureNumRegisters", 1)
+                        elif sensor_type_code == "CONDUCTIVITY":
+                            device_address = port_config.get("conductivityDeviceAddress", 4)
+                            function_code = port_config.get("conductivityFunctionCode", 3)
+                            start_address = port_config.get("conductivityStartAddress", 1)
+                            num_registers = port_config.get("conductivityNumRegisters", 2)
+                        elif sensor_type_code == "PRESSURE":
+                            device_address = port_config.get("pressureDeviceAddress", 4)
+                            function_code = port_config.get("pressureFunctionCode", 3)
+                            start_address = port_config.get("pressureStartAddress", 2)
+                            num_registers = port_config.get("pressureNumRegisters", 1)
                         else:
-                            logger.error(f"No response received from {port_number} for {sensor_type_code}")
+                            logger.error(f"[MODBUS-{cycle_count}] Unknown sensor type code: {sensor_type_code}")
+                            continue
+
+                        logger.debug(f"[MODBUS-{cycle_count}] Parameters - Device: 0x{device_address:02X}, Function: 0x{function_code:02X}, Address: 0x{start_address:04X}, Registers: {num_registers}")
+                        
+                        # Build and send Modbus command
+                        command = f'{device_address:02X}{function_code:02X}{start_address:04X}{num_registers:04X}'
+                        command_bytes = bytes.fromhex(command)
+                        crc = calculate_crc(command_bytes)
+                        full_command = command_bytes + crc
+                        
+                        logger.debug(f"[MODBUS-{cycle_count}] Sending command: {full_command.hex()}")
+                        ser.write(full_command)
+                        
+                        # Read response
+                        expected_response_length = 5 + 2 * num_registers
+                        logger.debug(f"[MODBUS-{cycle_count}] Waiting for response, expected length: {expected_response_length} bytes")
+                        
+                        response = ser.read(expected_response_length)
+                        
+                        if response:
+                            logger.debug(f"[MODBUS-{cycle_count}] Received raw response: {response.hex()}")
+                            
+                            # Process response based on sensor type
+                            if sensor_type_code == "TEMPERATURE":
+                                temperature_hex = response[3:5]
+                                temperature = int.from_bytes(temperature_hex, byteorder='big') * 0.1
+                                value = temperature
+                                logger.debug(f"[MODBUS-{cycle_count}] Parsed temperature value: {value} (raw hex: {temperature_hex.hex()})")
+                            elif sensor_type_code == "CONDUCTIVITY":
+                                conductivity_hex = response[3:7]
+                                conductivity = int.from_bytes(conductivity_hex, byteorder='big') * 0.001
+                                value = conductivity
+                                logger.debug(f"[MODBUS-{cycle_count}] Parsed conductivity value: {value} (raw hex: {conductivity_hex.hex()})")
+                            elif sensor_type_code == "PRESSURE":
+                                pressure_hex = response[3:5]
+                                pressure = int.from_bytes(pressure_hex, byteorder='big') * 0.1
+                                value = pressure
+                                logger.debug(f"[MODBUS-{cycle_count}] Parsed pressure value: {value} (raw hex: {pressure_hex.hex()})")
+                            
+                            serial_end_time = time.time()
+                            logger.debug(f"[SERIAL-{cycle_count}] Serial communication completed in {serial_end_time - serial_start_time:.3f} seconds")
+                        else:
+                            logger.error(f"[MODBUS-{cycle_count}] No response received from {port_number} for {sensor_type_code}")
+                            # Log device status if possible
+                            if ser.in_waiting:
+                                logger.debug(f"[MODBUS-{cycle_count}] Bytes waiting in buffer: {ser.in_waiting}")
+                                remaining_data = ser.read(ser.in_waiting)
+                                if remaining_data:
+                                    logger.debug(f"[MODBUS-{cycle_count}] Remaining data in buffer: {remaining_data.hex()}")
                     finally:
+                        logger.debug(f"[SERIAL-{cycle_count}] Closing serial port {port_number}")
                         ser.close()
                 except Exception as e:
-                    logger.error(f"Error accessing port {port_number}: {e}")
+                    import traceback
+                    logger.error(f"[SERIAL-{cycle_count}] Error accessing port {port_number}: {e}")
+                    logger.error(f"[SERIAL-{cycle_count}] Exception traceback: {traceback.format_exc()}")
 
             if value is not None:
                 telemetry_data = {
@@ -111,15 +206,33 @@ def read_telemetry_from_port(port_config, shutdown_event):
                     "isSimulated": should_simulate,
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
-                logger.info(f"Writing telemetry data to disk: {telemetry_data}")
+                logger.info(f"[DATA-{cycle_count}] Writing telemetry data to disk: {json.dumps(telemetry_data)}")
+                
+                storage_start_time = time.time()
                 write_telemetry_to_disk(telemetry_data)
+                storage_end_time = time.time()
+                
+                logger.debug(f"[DATA-{cycle_count}] Data storage completed in {storage_end_time - storage_start_time:.3f} seconds")
             else:
-                logger.warning(f"No valid reading obtained for {sensor_type_code} on port {port_number}")
+                logger.warning(f"[DATA-{cycle_count}] No valid reading obtained for {sensor_type_code} on port {port_number}")
 
         except Exception as e:
-            logger.error(f"Error in read_telemetry_from_port for {sensor_type_code}: {e}")
+            import traceback
+            logger.error(f"[ERROR-{cycle_count}] Error in read_telemetry_from_port for {sensor_type_code} on port {port_number}: {e}")
+            logger.error(f"[ERROR-{cycle_count}] Exception traceback: {traceback.format_exc()}")
         
-        shutdown_event.wait(seconds_between_reads)
+        # Calculate and log cycle timing information
+        cycle_end_time = time.time()
+        cycle_duration = cycle_end_time - cycle_start_time
+        logger.info(f"[TIMING-{cycle_count}] Cycle completed in {cycle_duration:.3f} seconds")
+        
+        # Calculate wait time (adjust if the cycle took longer than expected)
+        wait_time = max(0.1, seconds_between_reads - cycle_duration)
+        logger.debug(f"[TIMING-{cycle_count}] Waiting {wait_time:.3f} seconds until next cycle")
+        
+        shutdown_event.wait(wait_time)
+    
+    logger.info(f"[SHUTDOWN] Telemetry reader thread for {sensor_type_code} on port {port_number} shutting down after {cycle_count} cycles")
 
 def main():
     shutdown_event = Event()

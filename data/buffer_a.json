@@ -1,35 +1,112 @@
 [
   {
-    "readingGUID": "05062a26-1530-4cb2-b682-e8941a569087",
-    "sensorId": 12,
-    "sensorTypeId": 1,
-    "sensorTypeCode": "CONDUCTIVITY",
-    "sensorPositionId": "1223ds343",
-    "gatewayPortId": "COM1",
-    "value": 90.02008883323487,
-    "isSimulated": true,
-    "timestamp": "2025-02-28T01:49:31.869804+00:00"
-  },
-  {
-    "readingGUID": "f2a722e3-96db-4008-8dd3-c44e692674b1",
+    "readingGUID": "a45d4062-b016-4464-93b9-c4e9f2c425f0",
     "sensorId": 15,
     "sensorTypeId": 2,
     "sensorTypeCode": "TEMPERATURE",
     "sensorPositionId": "14vefre343",
     "gatewayPortId": "COM2",
-    "value": 78.22254450311141,
+    "value": 94.2286844526434,
     "isSimulated": true,
-    "timestamp": "2025-02-28T01:49:31.914559+00:00"
+    "timestamp": "2025-02-28T02:03:55.577538+00:00"
   },
   {
-    "readingGUID": "88082ac9-66b2-443a-89ff-aafdaf20458c",
+    "readingGUID": "32fc71c3-6952-4de8-aa59-a9bf7762be25",
+    "sensorId": 12,
+    "sensorTypeId": 1,
+    "sensorTypeCode": "CONDUCTIVITY",
+    "sensorPositionId": "1223ds343",
+    "gatewayPortId": "COM1",
+    "value": 7.2438213767545445,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:03:55.579271+00:00"
+  },
+  {
+    "readingGUID": "e906a78e-2219-40b8-a00b-78eb518e0a50",
+    "sensorId": 15,
+    "sensorTypeId": 2,
+    "sensorTypeCode": "TEMPERATURE",
+    "sensorPositionId": "14vefre343",
+    "gatewayPortId": "COM2",
+    "value": 50.59184301136806,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:05.958168+00:00"
+  },
+  {
+    "readingGUID": "3da12213-df95-4b42-a1d0-eaeb312c0e18",
+    "sensorId": 12,
+    "sensorTypeId": 1,
+    "sensorTypeCode": "CONDUCTIVITY",
+    "sensorPositionId": "1223ds343",
+    "gatewayPortId": "COM1",
+    "value": 0.5713413219431862,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:05.962108+00:00"
+  },
+  {
+    "readingGUID": "eced614c-4571-4c45-84cc-8e7a55757cae",
+    "sensorId": 15,
+    "sensorTypeId": 2,
+    "sensorTypeCode": "TEMPERATURE",
+    "sensorPositionId": "14vefre343",
+    "gatewayPortId": "COM2",
+    "value": 40.438381653678256,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:13.237677+00:00"
+  },
+  {
+    "readingGUID": "ee6a0c52-c725-4ee7-bde5-3b32f29c0d83",
+    "sensorId": 12,
+    "sensorTypeId": 1,
+    "sensorTypeCode": "CONDUCTIVITY",
+    "sensorPositionId": "1223ds343",
+    "gatewayPortId": "COM1",
+    "value": 37.85975988743099,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:15.682737+00:00"
+  },
+  {
+    "readingGUID": "adb79bb3-f4c9-4abe-af30-a677f2482b26",
+    "sensorId": 15,
+    "sensorTypeId": 2,
+    "sensorTypeCode": "TEMPERATURE",
+    "sensorPositionId": "14vefre343",
+    "gatewayPortId": "COM2",
+    "value": 2.907524789242999,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:18.846837+00:00"
+  },
+  {
+    "readingGUID": "6140fcc9-e5f9-4590-8d72-e0e5176143f5",
+    "sensorId": 12,
+    "sensorTypeId": 1,
+    "sensorTypeCode": "CONDUCTIVITY",
+    "sensorPositionId": "1223ds343",
+    "gatewayPortId": "COM1",
+    "value": 37.55633689218296,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:22.407197+00:00"
+  },
+  {
+    "readingGUID": "7b9a1b23-74f0-4f53-88f6-eff03532b6ab",
+    "sensorId": 15,
+    "sensorTypeId": 2,
+    "sensorTypeCode": "TEMPERATURE",
+    "sensorPositionId": "14vefre343",
+    "gatewayPortId": "COM2",
+    "value": 57.46322848427725,
+    "isSimulated": true,
+    "timestamp": "2025-02-28T02:04:24.798554+00:00"
+  },
+  {
+    "readingGUID": "e1c76ff5-e272-4499-b72f-fecb512dcdb4",
     "sensorId": 28,
     "sensorTypeId": 3,
     "sensorTypeCode": "PRESSURE",
     "sensorPositionId": "1sfrfd343",
     "gatewayPortId": "COM3",
-    "value": 81.84316180413813,
+    "value": 84.46147474573787,
     "isSimulated": true,
-    "timestamp": "2025-02-28T01:49:31.961797+00:00"
+    "timestamp": "2025-02-28T02:04:23.172794+00:00"
   }
 ]
