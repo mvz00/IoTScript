@@ -13,7 +13,7 @@ import socket
 from pathlib import Path
 from common import (
     setup_logging, get_config, get_active_buffer, switch_buffer,
-    write_lock, ARCHIVE_FILE_PATH
+    write_lock, ARCHIVE_FILE_PATH, get_tracked_guids, save_tracked_guids
 )
 
 logger = setup_logging("telemetry_uploader", log_file_path=Path("log/writer.log"))
@@ -24,6 +24,12 @@ global_shutdown_event = Event()
 
 # Client lock to prevent multiple connection issues
 client_lock = Lock()
+
+# Load tracking data from persistent storage
+tracking_data = get_tracked_guids()
+sent_payload_guids = set(tracking_data["payload_guids"])
+# Max size for the tracking set to prevent memory growth
+MAX_TRACKING_SIZE = 1000
 
 def sanitize_filename(timestamp):
     return timestamp.replace(':', '-').replace('+', '_plus_')
@@ -100,10 +106,44 @@ def safe_client_shutdown(client):
     
     logger.info("Client resources released")
 
+def update_guid_tracking():
+    """Save the current tracking data to disk for persistence across restarts"""
+    global tracking_data, sent_payload_guids
+    
+    tracking_data["payload_guids"] = list(sent_payload_guids)
+    save_tracked_guids(tracking_data)
+    logger.debug(f"Updated GUID tracking file with {len(sent_payload_guids)} payload GUIDs")
+
+def prepare_telemetry_payload(telemetry_data):
+    """Prepare a payload with consistent GUID handling"""
+    # Generate a new payloadGUID that will be consistent for retries
+    payload_guid = str(uuid.uuid4())
+    
+    # Check if this payload GUID has been used before (extremely unlikely but possible)
+    while payload_guid in sent_payload_guids:
+        payload_guid = str(uuid.uuid4())
+    
+    # Create the payload with the consistent GUID
+    payload = {
+        "payloadGUID": payload_guid,
+        "gatewayId": config["gatewayId"],
+        "modelNumber": config["modelNumber"],
+        "serialNumber": config["serialNumber"],
+        "organisationId": config["organisationId"],
+        "siteId": config["siteId"],
+        "telemetry": telemetry_data,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+    
+    return payload, payload_guid
+
 def send_message_with_retry(telemetry_data, shutdown_event):
     """Send a single message with retry logic"""
     max_retries = 3
     retry_count = 0
+    
+    # Prepare the payload once to ensure consistent GUID across retries
+    payload, payload_guid = prepare_telemetry_payload(telemetry_data)
     
     while retry_count < max_retries and not shutdown_event.is_set():
         with client_lock:  # Ensure we don't have overlapping client operations
@@ -116,30 +156,31 @@ def send_message_with_retry(telemetry_data, shutdown_event):
                 client.connect()
                 logger.info("Connected to IoT Hub for message send")
                 
-                # Create the payload
-                payload = {
-                    "payloadGUID": str(uuid.uuid4()),
-                    "gatewayId": config["gatewayId"],
-                    "modelNumber": config["modelNumber"],
-                    "serialNumber": config["serialNumber"],
-                    "organisationId": config["organisationId"],
-                    "siteId": config["siteId"],
-                    "telemetry": telemetry_data,
-                    "timestamp": datetime.now(timezone.utc).isoformat()
-                }
-                
-                # Create and send the message
+                # Create and send the message - using the same payload for all retries
                 telemetry_message = Message(json.dumps(payload))
                 telemetry_message.content_type = "application/json"
                 telemetry_message.content_encoding = "utf-8"
                 
-                logger.info(f"Sending telemetry message with {len(telemetry_data)} readings")
+                logger.info(f"Sending telemetry message with {len(telemetry_data)} readings, payloadGUID: {payload_guid}")
                 # Send the message and wait for the result
                 client.send_message(telemetry_message)
                 logger.info("Message sent successfully")
                 
                 # Clean shutdown
                 safe_client_shutdown(client)
+                
+                # Track this payload as successfully sent
+                sent_payload_guids.add(payload_guid)
+                
+                # Limit the size of the tracking set to prevent memory growth
+                if len(sent_payload_guids) > MAX_TRACKING_SIZE:
+                    # Remove the oldest entries (convert to list, slice, convert back to set)
+                    sent_payload_guids_list = list(sent_payload_guids)
+                    sent_payload_guids.clear()
+                    sent_payload_guids.update(sent_payload_guids_list[-MAX_TRACKING_SIZE:])
+                
+                # Update the persistent tracking file
+                update_guid_tracking()
                 
                 # Message sent successfully
                 return True
@@ -185,6 +226,7 @@ def main():
     
     try:
         logger.info("Starting telemetry uploader")
+        logger.info(f"Loaded {len(sent_payload_guids)} previously sent payload GUIDs for tracking")
         
         last_send_time = time.time()
         seconds_between_sends = config["secondsBetweenSends"]

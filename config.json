@@ -31,7 +31,7 @@
       "dataBits": 8,
       "parity": "None",
       "stopBits": 1,
-      "deviceAddress": 1,
+      "deviceAddress": 4,
       "functionCode": 3,
       "startAddress": 1,
       "numRegisters": 2

@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timedelta
 from threading import Lock
+import os
 
 # Initialize global variables
 config = None
@@ -13,6 +14,7 @@ ARCHIVE_FILE_PATH = None
 BUFFER_A = None
 BUFFER_B = None
 ACTIVE_BUFFER_FILE = None
+GUID_TRACKING_FILE = None
 
 # Logging configuration
 LOGGING_MODES = {
@@ -34,7 +36,7 @@ LOGGING_MODES = {
 }
 
 def initialize():
-    global config, LOG_FILE_PATH, TELEMETRY_FILE_PATH, ARCHIVE_FILE_PATH, BUFFER_A, BUFFER_B, ACTIVE_BUFFER_FILE
+    global config, LOG_FILE_PATH, TELEMETRY_FILE_PATH, ARCHIVE_FILE_PATH, BUFFER_A, BUFFER_B, ACTIVE_BUFFER_FILE, GUID_TRACKING_FILE
     
     # Load configuration
     with open("config.json", "r") as config_file:
@@ -47,11 +49,46 @@ def initialize():
     BUFFER_A = TELEMETRY_FILE_PATH.parent / "buffer_a.json"
     BUFFER_B = TELEMETRY_FILE_PATH.parent / "buffer_b.json"
     ACTIVE_BUFFER_FILE = TELEMETRY_FILE_PATH.parent / "active_buffer.txt"
+    GUID_TRACKING_FILE = TELEMETRY_FILE_PATH.parent / "guid_tracking.json"
 
     # Ensure directories exist
     LOG_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
     TELEMETRY_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
     ARCHIVE_FILE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Initialize the GUID tracking file if it doesn't exist
+    if not GUID_TRACKING_FILE.exists():
+        with open(GUID_TRACKING_FILE, 'w') as f:
+            json.dump({"payload_guids": [], "reading_guids": []}, f)
+
+def get_tracked_guids():
+    """Read the GUID tracking file and return the contents"""
+    try:
+        if not GUID_TRACKING_FILE.exists():
+            with open(GUID_TRACKING_FILE, 'w') as f:
+                json.dump({"payload_guids": [], "reading_guids": []}, f)
+            return {"payload_guids": [], "reading_guids": []}
+            
+        with open(GUID_TRACKING_FILE, 'r') as f:
+            return json.load(f)
+    except Exception as e:
+        logging.error(f"Error reading GUID tracking file: {e}")
+        return {"payload_guids": [], "reading_guids": []}
+
+def save_tracked_guids(guid_data):
+    """Save the GUID tracking data to disk"""
+    try:
+        # Ensure we don't let this file grow too large 
+        # Keep at most the last 1000 GUIDs of each type
+        if len(guid_data["payload_guids"]) > 1000:
+            guid_data["payload_guids"] = guid_data["payload_guids"][-1000:]
+        if len(guid_data["reading_guids"]) > 10000:
+            guid_data["reading_guids"] = guid_data["reading_guids"][-10000:]
+            
+        with open(GUID_TRACKING_FILE, 'w') as f:
+            json.dump(guid_data, f)
+    except Exception as e:
+        logging.error(f"Error saving GUID tracking data: {e}")
 
 def get_config():
     global config
@@ -133,7 +170,9 @@ __all__ = [
     'LOG_FILE_PATH',
     'BUFFER_A',
     'BUFFER_B',
-    'ACTIVE_BUFFER_FILE'
+    'ACTIVE_BUFFER_FILE',
+    'get_tracked_guids',
+    'save_tracked_guids'
 ]
 
 # Initialize module when imported

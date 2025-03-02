@@ -5,17 +5,51 @@ import logging  # Add this import
 from datetime import datetime, timezone
 import serial
 import serial.tools.list_ports
-from threading import Thread, Event
+from threading import Thread, Event, Lock
 import json
-from common import setup_logging, get_config, get_active_buffer, write_lock
+from common import setup_logging, get_config, get_active_buffer, write_lock, get_tracked_guids, save_tracked_guids
 from pathlib import Path
 
 logger = setup_logging("telemetry_reader", log_file_path=Path("log/reader.log"))
 config = get_config()
 
+# Track telemetry GUIDs to ensure uniqueness
+telemetry_guid_lock = Lock()
+tracking_data = get_tracked_guids()
+telemetry_guids = set(tracking_data["reading_guids"])
+MAX_GUID_CACHE_SIZE = 10000  # Prevent memory growth
+
+logger.info(f"Loaded {len(telemetry_guids)} previously tracked reading GUIDs")
+
 def is_port_available(port_number):
     available_ports = [p.device for p in serial.tools.list_ports.comports()]
     return port_number in available_ports
+
+def generate_unique_reading_guid():
+    """Generate a unique reading GUID that hasn't been used before"""
+    with telemetry_guid_lock:
+        reading_guid = str(uuid.uuid4())
+        
+        # Extremely unlikely, but check if this GUID has been used before
+        while reading_guid in telemetry_guids:
+            reading_guid = str(uuid.uuid4())
+        
+        # Add to the tracking set
+        telemetry_guids.add(reading_guid)
+        
+        # Keep set size in check
+        if len(telemetry_guids) > MAX_GUID_CACHE_SIZE:
+            # Convert to list, trim, convert back to set to remove oldest entries
+            guid_list = list(telemetry_guids)
+            telemetry_guids.clear()
+            telemetry_guids.update(guid_list[-MAX_GUID_CACHE_SIZE:])
+        
+        # Update the persistent tracking file
+        global tracking_data
+        tracking_data["reading_guids"] = list(telemetry_guids)
+        save_tracked_guids(tracking_data)
+        
+        return reading_guid
 
 def write_telemetry_to_disk(data):
     try:
@@ -28,6 +62,10 @@ def write_telemetry_to_disk(data):
                         telemetry_data = json.load(f)
                 except (json.JSONDecodeError, FileNotFoundError):
                     telemetry_data = []
+            
+            # Ensure data has a readingGUID if not already present
+            if "readingGUID" not in data:
+                data["readingGUID"] = generate_unique_reading_guid()
             
             telemetry_data.append(data)
             
@@ -174,8 +212,11 @@ def read_telemetry_from_port(port_config, shutdown_event):
                     logger.error(f"[SERIAL-{cycle_count}] Exception traceback: {traceback.format_exc()}")
 
             if value is not None:
+                # Generate a unique GUID for this reading - it will persist even if the data is sent multiple times
+                reading_guid = generate_unique_reading_guid()
+                
                 telemetry_data = {
-                    "readingGUID": str(uuid.uuid4()),
+                    "readingGUID": reading_guid,
                     "sensorId": sensor_id,
                     "sensorTypeId": sensor_type_id,
                     "sensorTypeCode": sensor_type_code,
@@ -185,7 +226,7 @@ def read_telemetry_from_port(port_config, shutdown_event):
                     "isSimulated": should_simulate,
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
-                logger.info(f"[DATA-{cycle_count}] Writing telemetry data to disk: {json.dumps(telemetry_data)}")
+                logger.info(f"[DATA-{cycle_count}] Writing telemetry data to disk with readingGUID: {reading_guid}")
                 
                 storage_start_time = time.time()
                 write_telemetry_to_disk(telemetry_data)
